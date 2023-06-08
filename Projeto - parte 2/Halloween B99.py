@@ -325,6 +325,6 @@ regras4.setRestricoesLocal("Deve ocorrer em um casa assombrado")
 regras4.setDuracao("A duração é de algumas horas na madrugada")
 print("Regras 4")
 print("Restrições Locais: {}".format(regras4.getRestricoesLocal()))
-print("Duração: {}\n".format(regras4.getDuracao()))
+print("Duraçãoo: {}\n".format(regras4.getDuracao()))
 
 
