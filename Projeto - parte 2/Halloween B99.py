@@ -300,3 +300,7 @@ estrategia4.estrategia1()
 print("Estratégia 4")
 print(f'Detetive: {estrategia4.getDetetive().getNome()}')
 print(f'Estratégia: {estrategia4.estrategia1()} \n')
+
+competicao1 = Competicao()
+competicao1.setListaParticipantes[detetive1, detetive2, detetive3, detetive4, detetive5, detetive6]
+competicao1.setDataCompeticao
