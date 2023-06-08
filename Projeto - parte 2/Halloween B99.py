@@ -61,6 +61,7 @@ class Peca:
 class Estrategia:
     def __init__(self):
         self.__detetive = None
+        self.__listaAcoes = []
 
     def getDetetive(self):
         return self.__detetive
@@ -68,14 +69,11 @@ class Estrategia:
     def setDetetive(self, detetive):
         self.__detetive = detetive
 
-    def estrategia1(self):
-        return "Espalhe informações falsas ou crie situações enganosas para induzir os outros competidores a cometerem erros."
+    def getListaAcoes(self):
+        return self.__listaAcoes
 
-    def estrategia2(self):
-        return "Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas."
-
-    def estrategia3(self):
-        return "Se disfarce como funcionários de um local específico para obter acesso privilegiado e informações valiosas que possam ajudá-lo."
+    def setListaAcoes(self, listaAcoes):
+        self.__listaAcoes = listaAcoes
 
 class Competicao:
     def __init__(self):
@@ -275,32 +273,36 @@ print(f"Descrição da Peça: {peca4.getDescricaoPeca()}\n")
 
 estrategia1 = Estrategia()
 estrategia1.setDetetive(detetive1)
-estrategia1.estrategia3()
+estrategia1.setListaAcoes("Espalhe informações falsas ou crie situações enganosas para induzir os outros competidores a cometerem erros.")
 print("Estratégia 1")
 print(f'Detetive: {estrategia1.getDetetive().getNome()}')
-print(f'Estratégia: {estrategia1.estrategia3()} \n')
+print(f'Estratégia: {estrategia1.getListaAcoes()} \n')
 
 estrategia2 = Estrategia()
 estrategia2.setDetetive(detetive6)
-estrategia2.estrategia2()
+estrategia2.setListaAcoes("Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas.")
 print("Estratégia 2")
 print(f'Detetive: {estrategia2.getDetetive().getNome()}')
-print(f'Estratégia: {estrategia2.estrategia2()} \n')
+print(f'Estratégia: {estrategia2.getListaAcoes()} \n')
 
 estrategia3 = Estrategia()
 estrategia3.setDetetive(detetive2)
-estrategia3.estrategia2()
+estrategia3.setListaAcoes("Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas.")
 print("Estratégia 3")
 print(f'Detetive: {estrategia3.getDetetive().getNome()}')
-print(f'Estratégia: {estrategia3.estrategia2()} \n')
+print(f'Estratégia: {estrategia3.getListaAcoes()} \n')
 
 estrategia4 = Estrategia()
 estrategia4.setDetetive(detetive3)
-estrategia4.estrategia1()
+estrategia4.setListaAcoes("Se disfarce como funcionários de um local específico para obter acesso privilegiado e informações valiosas que possam ajudá-lo.")
 print("Estratégia 4")
 print(f'Detetive: {estrategia4.getDetetive().getNome()}')
+
 print(f'Estratégia: {estrategia4.estrategia1()} \n')
 
 competicao1 = Competicao()
 competicao1.setListaParticipantes[detetive1, detetive2, detetive3, detetive4, detetive5, detetive6]
 competicao1.setDataCompeticao
+
+print(f'Estratégia: {estrategia4.getListaAcoes()} \n')
+
