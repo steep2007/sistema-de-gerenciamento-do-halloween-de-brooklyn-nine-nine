@@ -112,7 +112,7 @@ class Regras:
 class Ranking:
     def __init__(self):
         self.__listaDetetives = []
-        self.__pontuacoes = None
+        self.__pontuacoes = []
 
     def getListaDetetives(self):
         return self.__listaDetetives
@@ -124,7 +124,7 @@ class Ranking:
         return self.__pontuacoes
 
     def setPontuacoes(self, pontuacoes):
-        self.__pontuacoes = pontuacoes
+        self.__pontuacoes.append(pontuacoes)
 
 class Trofeu:
     def __init__(self):
@@ -349,7 +349,6 @@ competicao2.setDataCompeticao("31/10/2017")
 print("Competição 2")
 print(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}, {competicao1.getListaParticipantes()[4].getNome()}\n")
 
-
 competicao3 = Competicao()
 competicao3.setListaParticipantes(detetive1)
 competicao3.setListaParticipantes(detetive2)
@@ -357,6 +356,37 @@ competicao3.setListaParticipantes(detetive3)
 competicao3.setListaParticipantes(detetive4)
 competicao3.setListaParticipantes(detetive5)
 competicao3.setListaParticipantes(detetive6)
-competicao3.setDataCompeticao("31/10/2018")
+competicao3.setDataCompeticao("31/10/2018 - Edição Atual")
 print("Competição 3")
 print(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}, {competicao1.getListaParticipantes()[4].getNome()}, {competicao1.getListaParticipantes()[5].getNome()} \n")
+
+
+ranking1 = Ranking()
+ranking1.setListaDetetives(detetive1)
+ranking1.setListaDetetives(detetive3)
+ranking1.setListaDetetives(detetive5)
+ranking1.setPontuacoes(741)
+ranking1.setPontuacoes(568)
+ranking1.setPontuacoes(243)
+print("Ranking 1")
+print(f"Detetives e Pontuações: \n{ranking1.getListaDetetives()[0].getNome()} - {ranking1.getPontuacoes()[0]}\n{ranking1.getListaDetetives()[1].getNome()} - {ranking1.getPontuacoes()[1]}\n{ranking1.getListaDetetives()[2].getNome()} - {ranking1.getPontuacoes()[2]}\n")
+
+ranking2 = Ranking()
+ranking2.setListaDetetives(detetive6)
+ranking2.setListaDetetives(detetive2)
+ranking2.setListaDetetives(detetive4)
+ranking2.setPontuacoes(1250)
+ranking2.setPontuacoes(895)
+ranking2.setPontuacoes(546)
+print("Ranking 2")
+print(f"Detetives e Pontuações: \n{ranking2.getListaDetetives()[0].getNome()} - {ranking2.getPontuacoes()[0]}\n{ranking2.getListaDetetives()[1].getNome()} - {ranking2.getPontuacoes()[1]}\n{ranking2.getListaDetetives()[2].getNome()} - {ranking2.getPontuacoes()[2]}\n")
+
+ranking3 = Ranking()
+ranking3.setListaDetetives(detetive4)
+ranking3.setListaDetetives(detetive2)
+ranking3.setListaDetetives(detetive3)
+ranking3.setPontuacoes(890)
+ranking3.setPontuacoes(315)
+ranking3.setPontuacoes(178)
+print("Ranking 3")
+print(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n")
