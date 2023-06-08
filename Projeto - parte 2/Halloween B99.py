@@ -298,3 +298,33 @@ estrategia4.setListaAcoes("Se disfarce como funcionários de um local específic
 print("Estratégia 4")
 print(f'Detetive: {estrategia4.getDetetive().getNome()}')
 print(f'Estratégia: {estrategia4.getListaAcoes()} \n')
+
+regras1 = Regras()
+regras1.setRestricoesLocal("Deve ocorrer dentro do Museu")
+regras1.setDuracao("A duração é de um dia inteiro")
+print("Regras 1")
+print("Restrições Locais: {}".format(regras1.getRestricoesLocal()))
+print("Duração: {}\n".format(regras1.getDuracao()))
+
+regras2 = Regras()
+regras2.setRestricoesLocal("Deve ocorrer dentro da Galeria de Arte")
+regras2.setDuracao("A duração é de algumas horas")
+print("Regras 2")
+print("Restrições Locais: {}".format(regras2.getRestricoesLocal()))
+print("Duração: {}\n".format(regras2.getDuracao()))
+
+regras3 = Regras()
+regras3.setRestricoesLocal("Deve ocorrer dentro da Delegacia")
+regras3.setDuracao("A duração é de algumas horas à noite")
+print("Regras 3")
+print("Restrições Locais: {}".format(regras3.getRestricoesLocal()))
+print("Duração: {}\n".format(regras3.getDuracao()))
+
+regras4 = Regras()
+regras4.setRestricoesLocal("Deve ocorrer em um casa assombrado")
+regras4.setDuracao("A duração é de algumas horas na madrugada")
+print("Regras 4")
+print("Restrições Locais: {}".format(regras4.getRestricoesLocal()))
+print("Duração: {}\n".format(regras4.getDuracao()))
+
+
