@@ -6,6 +6,7 @@ class Detetive:
         self.__sobrenome = None
         self.__cargo = None
         self.__participacaoAnterior = None
+
     def getNome(self):
         return self.__nome
 
@@ -57,11 +58,9 @@ class Peca:
     def setDescricaoPeca(self, descricaoPeca):
         self.__descricaoPeca = descricaoPeca
 
-
 class Estrategia:
     def __init__(self):
         self.__detetive = None
-        self.__listaAcoes = []
 
     def getDetetive(self):
         return self.__detetive
@@ -69,11 +68,14 @@ class Estrategia:
     def setDetetive(self, detetive):
         self.__detetive = detetive
 
-    def getListaAcoes(self):
-        return self.__listaAcoes
+    def estrategia1(self):
+        return "Espalhe informações falsas ou crie situações enganosas para induzir os outros competidores a cometerem erros."
 
-    def setListaAcoes(self, acao):
-        self.__listaAcoes.append(acao)
+    def estrategia2(self):
+        return "Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas."
+
+    def estrategia3(self):
+        return "Se disfarce como funcionários de um local específico para obter acesso privilegiado e informações valiosas que possam ajudá-lo."
 
 class Competicao:
     def __init__(self):
@@ -226,21 +228,47 @@ alianca1 = Alianca()
 alianca1.setDetetivesAliados(detetive6)
 alianca1.setDetetivesAliados(detetive2)
 print("Aliança 1")
-print(f"Detetives Aliados: {detetive6.getNome()} e {detetive2.getNome()}")
+print(f"Detetives Aliados: {alianca1.getDetetivesAliados()[0].getNome()} e {alianca1.getDetetivesAliados()[1].getNome()}")
 print()
 
 alianca2 = Alianca()
 alianca2.setDetetivesAliados(detetive1)
 alianca2.setDetetivesAliados(detetive5)
 print("Aliança 2")
-print(f"Detetives Aliados: {detetive1.getNome()} e {detetive5.getNome()}")
+print(f"Detetives Aliados: {alianca2.getDetetivesAliados()[0].getNome()} e {alianca2.getDetetivesAliados()[1].getNome()}")
 print()
 
 alianca3 = Alianca()
 alianca3.setDetetivesAliados(detetive1)
 alianca3.setDetetivesAliados(detetive4)
 print("Aliança 3")
-print(f"Detetives Aliados: {detetive1.getNome()} e {detetive4.getNome()}")
+print(f"Detetives Aliados: {alianca3.getDetetivesAliados()[0].getNome()} e {alianca3.getDetetivesAliados()[1].getNome()}")
 print()
 
+estrategia1 = Estrategia()
+estrategia1.setDetetive(detetive1)
+estrategia1.estrategia3()
+print("Estratégia 1")
+print(f'Detetive: {estrategia1.getDetetive().getNome()}')
+print(f'Estratégia: {estrategia1.estrategia3()} \n')
 
+estrategia2 = Estrategia()
+estrategia2.setDetetive(detetive6)
+estrategia2.estrategia2()
+print("Estratégia 2")
+print(f'Detetive: {estrategia2.getDetetive().getNome()}')
+print(f'Estratégia: {estrategia2.estrategia2()} \n')
+
+estrategia3 = Estrategia()
+estrategia3.setDetetive(detetive2)
+estrategia3.estrategia2()
+print("Estratégia 3")
+print(f'Detetive: {estrategia3.getDetetive().getNome()}')
+print(f'Estratégia: {estrategia3.estrategia2()} \n')
+
+estrategia4 = Estrategia()
+estrategia4.setDetetive(detetive3)
+estrategia4.estrategia1()
+print("Estratégia 4")
+print(f'Detetive: {estrategia4.getDetetive().getNome()}')
+print(f'Estratégia: {estrategia4.estrategia1()} \n')
