@@ -325,7 +325,7 @@ regras4.setRestricoesLocal("Deve ocorrer em um casa assombrado")
 regras4.setDuracao("A duração é de algumas horas na madrugada")
 print("Regras 4")
 print("Restrições Locais: {}".format(regras4.getRestricoesLocal()))
-print("Duraçãoo: {}\n".format(regras4.getDuracao()))
+print("Duração: {}\n".format(regras4.getDuracao()))
 
 competicao1 = Competicao()
 competicao1.setListaParticipantes(detetive1)
@@ -390,8 +390,6 @@ ranking3.setPontuacoes(178)
 print("Ranking 3")
 print(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n")
 
-<<<<<<< HEAD
-=======
 trofeu1 = Trofeu()
 trofeu1.setDetetiveVencedor(detetive1)
 trofeu1.setAnoVitoria(competicao1)
@@ -418,4 +416,3 @@ print("Vencedor 3")
 print(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}")
 print(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}")
 print(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n")
->>>>>>> 599bb37ee9f8644db323baa2c6210d668c3f72cb
