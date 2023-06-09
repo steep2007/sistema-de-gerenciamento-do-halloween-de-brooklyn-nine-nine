@@ -79,27 +79,6 @@ class Arquivo:
             arquivo.write(f'Detetive: {estrategia1.getDetetive().getNome()}\n')
             arquivo.write(f'Estratégia: {estrategia1.getListaAcoes()}\n \n')
 
-            arquivo.write("Regras 1\n")
-            arquivo.write("Restrições Locais: {}\n".format(regras1.getRestricoesLocal()))
-            arquivo.write("Duração: {}\n\n".format(regras1.getDuracao()))
-
-            arquivo.write("Regras 2\n")
-            arquivo.write("Restrições Locais: {}\n".format(regras2.getRestricoesLocal()))
-            arquivo.write("Duração: {}\n\n".format(regras2.getDuracao()))
-
-            arquivo.write("Regras 3\n")
-            arquivo.write("Restrições Locais: {}\n".format(regras3.getRestricoesLocal()))
-            arquivo.write("Duração: {}\n\n".format(regras3.getDuracao()))
-
-            arquivo.write("Ranking 1 \n")
-            arquivo.write(f"Detetives e Pontuações: \n{ranking1.getListaDetetives()[0].getNome()} - {ranking1.getPontuacoes()[0]}\n{ranking1.getListaDetetives()[1].getNome()} - {ranking1.getPontuacoes()[1]}\n{ranking1.getListaDetetives()[2].getNome()} - {ranking1.getPontuacoes()[2]}\n\n")
-
-            arquivo.write("Ranking 2 \n")
-            arquivo.write(f"Detetives e Pontuações: \n{ranking2.getListaDetetives()[0].getNome()} - {ranking2.getPontuacoes()[0]}\n{ranking2.getListaDetetives()[1].getNome()} - {ranking2.getPontuacoes()[1]}\n{ranking2.getListaDetetives()[2].getNome()} - {ranking2.getPontuacoes()[2]}\n\n")
-
-            arquivo.write("Ranking 3 \n")
-            arquivo.write(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n\n")
-
             arquivo.write("Estratégia 2\n")
             arquivo.write(f'Detetive: {estrategia2.getDetetive().getNome()}\n')
             arquivo.write(f'Estratégia: {estrategia2.getListaAcoes()}\n \n')
@@ -112,6 +91,18 @@ class Arquivo:
             arquivo.write(f'Detetive: {estrategia4.getDetetive().getNome()}\n')
             arquivo.write(f'Estratégia: {estrategia4.getListaAcoes()} \n \n')
 
+            arquivo.write("Regras 1\n")
+            arquivo.write("Restrições Locais: {}\n".format(regras1.getRestricoesLocal()))
+            arquivo.write("Duração: {}\n\n".format(regras1.getDuracao()))
+
+            arquivo.write("Regras 2\n")
+            arquivo.write("Restrições Locais: {}\n".format(regras2.getRestricoesLocal()))
+            arquivo.write("Duração: {}\n\n".format(regras2.getDuracao()))
+
+            arquivo.write("Regras 3\n")
+            arquivo.write("Restrições Locais: {}\n".format(regras3.getRestricoesLocal()))
+            arquivo.write("Duração: {}\n\n".format(regras3.getDuracao()))
+
             arquivo.write("Competição 1\n")
             arquivo.write(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}\n")
             arquivo.write(f"Data da Competição: {competicao1.getDataCompeticao()}\n \n")
@@ -123,6 +114,15 @@ class Arquivo:
             arquivo.write("Competição 3\n")
             arquivo.write(f"Participantes: {competicao3.getListaParticipantes()[0].getNome()}, {competicao3.getListaParticipantes()[1].getNome()}, {competicao3.getListaParticipantes()[2].getNome()}, {competicao3.getListaParticipantes()[3].getNome()}, {competicao3.getListaParticipantes()[4].getNome()}, {competicao3.getListaParticipantes()[5].getNome()}\n")
             arquivo.write(f"Data da Competição: {competicao3.getDataCompeticao()}\n \n")
+
+            arquivo.write("Ranking 1 \n")
+            arquivo.write(f"Detetives e Pontuações: \n{ranking1.getListaDetetives()[0].getNome()} - {ranking1.getPontuacoes()[0]}\n{ranking1.getListaDetetives()[1].getNome()} - {ranking1.getPontuacoes()[1]}\n{ranking1.getListaDetetives()[2].getNome()} - {ranking1.getPontuacoes()[2]}\n\n")
+
+            arquivo.write("Ranking 2 \n")
+            arquivo.write(f"Detetives e Pontuações: \n{ranking2.getListaDetetives()[0].getNome()} - {ranking2.getPontuacoes()[0]}\n{ranking2.getListaDetetives()[1].getNome()} - {ranking2.getPontuacoes()[1]}\n{ranking2.getListaDetetives()[2].getNome()} - {ranking2.getPontuacoes()[2]}\n\n")
+
+            arquivo.write("Ranking 3 \n")
+            arquivo.write(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n\n")
 
             arquivo.write("Vencedor 1\n")
             arquivo.write(f"Detetive Vencedor: {trofeu1.getDetetiveVencedor().getNome()}\n")
