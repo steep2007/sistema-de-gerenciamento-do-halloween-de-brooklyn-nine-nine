@@ -390,3 +390,32 @@ ranking3.setPontuacoes(178)
 print("Ranking 3")
 print(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n")
 
+<<<<<<< HEAD
+=======
+trofeu1 = Trofeu()
+trofeu1.setDetetiveVencedor(detetive1)
+trofeu1.setAnoVitoria(competicao1)
+trofeu1.setFraseVitoria("O detetive Peralta é um sensacional detetine/gênio!")
+print("Vencedor 1")
+print(f"Detetive Vencedor: {trofeu1.getDetetiveVencedor().getNome()}")
+print(f"Ano da Vitória: {trofeu1.getAnoVitoria().getDataCompeticao()}")
+print(f"Frase da Vitória: {trofeu1.getFraseVitoria()}\n")
+
+trofeu2 = Trofeu()
+trofeu2.setDetetiveVencedor(detetive6)
+trofeu2.setAnoVitoria(competicao2)
+trofeu2.setFraseVitoria("O capitão de polícia Holt é um ótimo detetine/gênio!")
+print("Vencedor 2")
+print(f"Detetive Vencedor: {trofeu2.getDetetiveVencedor().getNome()}")
+print(f"Ano da Vitória: {trofeu2.getAnoVitoria().getDataCompeticao()}")
+print(f"Frase da Vitória: {trofeu2.getFraseVitoria()}\n")
+
+trofeu3 = Trofeu()
+trofeu3.setDetetiveVencedor(detetive2)
+trofeu3.setAnoVitoria(competicao3)
+trofeu3.setFraseVitoria("Amy Santiago é uma detetive incrível/gênio!")
+print("Vencedor 3")
+print(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}")
+print(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}")
+print(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n")
+>>>>>>> 599bb37ee9f8644db323baa2c6210d668c3f72cb
