@@ -66,15 +66,15 @@ Estratégia: Espalhe informações falsas ou crie situações enganosas para induzir 
 Estratégia 2
 Detetive: Raymond
 Estratégia: Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas.
-
+ 
 Estratégia 3
 Detetive: Amy
-Estratégia: Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas.
-
+Estratégia: Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas. 
+ 
 Estratégia 4
 Detetive: Rosa
-Estratégia: Se disfarce como funcionários de um local específico para obter acesso privilegiado e informações valiosas que possam ajudá-lo.
-
+Estratégia: Se disfarce como funcionários de um local específico para obter acesso privilegiado e informações valiosas que possam ajudá-lo. 
+ 
 Regras 1
 Restrições Locais: Deve ocorrer dentro do Museu
 Duração: A duração é de um dia inteiro
@@ -90,29 +90,29 @@ Duração: A duração é de algumas horas à noite
 Competição 1
 Participantes: Jake, Amy, Rosa, Terry
 Data da Competição: 31/10/2016
-
+ 
 Competição 2
 Participantes: Jake, Amy, Rosa, Terry, Charles, Raymond
 Data da Competição: 31/10/2017
-
+ 
 Competição 3
 Participantes: Jake, Amy, Rosa, Terry, Charles, Raymond
 Data da Competição: 31/10/2018 - Edição Atual
-
-Ranking 1
-Detetives e Pontuações:
+ 
+Ranking 1 
+Detetives e Pontuações: 
 Jake - 741
 Rosa - 568
 Charles - 243
 
-Ranking 2
-Detetives e Pontuações:
+Ranking 2 
+Detetives e Pontuações: 
 Raymond - 1250
 Amy - 895
 Terry - 546
 
-Ranking 3
-Detetives e Pontuações:
+Ranking 3 
+Detetives e Pontuações: 
 Amy - 890
 Terry - 315
 Rosa - 178
@@ -121,13 +121,14 @@ Vencedor 1
 Detetive Vencedor: Jake
 Ano da Vitória: 31/10/2016
 Frase da Vitória: O detetive Peralta é um sensacional detetine/gênio!
-
+ 
 Vencedor 2
 Detetive Vencedor: Raymond
 Ano da Vitória: 31/10/2017
 Frase da Vitória: O capitão de polícia Holt é um ótimo detetine/gênio!
-
+ 
 Vencedor 3
 Detetive Vencedor: Amy
 Ano da Vitória: 31/10/2018 - Edição Atual
 Frase da Vitória: Amy Santiago é uma detetive incrível/gênio!
+ 

@@ -1,3 +1,5 @@
+import mysql.connector
+
 from classes.detetive import Detetive
 from classes.alianca import Alianca
 from classes.peca import Peca
