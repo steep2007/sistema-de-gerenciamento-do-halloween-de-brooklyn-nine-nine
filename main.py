@@ -7,6 +7,17 @@ from classes.regras import Regras
 from classes.ranking import Ranking
 from classes.trofeu import Trofeu
 
+class Arquivo:
+    def lerArquivo(self):
+        with open("classes.txt", "r") as arquivo:
+            conteudo = arquivo.read()
+            return conteudo
+    def escreverArquivo(self, alianca1):
+        with open("classes.txt", "w") as arquivo:
+            arquivo.write("Aliança 1\n")
+            arquivo.write(f"Detetives Aliados: {alianca1.getDetetivesAliados()[0].getNome()} e {alianca1.getDetetivesAliados()[1].getNome()}")
+
+
 detetive1 = Detetive()
 detetive1.setNome("Jake")
 detetive1.setSobrenome("Peralta")
@@ -274,3 +285,7 @@ print("Vencedor 3")
 print(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}")
 print(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}")
 print(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n")
+
+arquivo = Arquivo()
+arquivo.escreverArquivo(alianca1)
+arquivo.lerArquivo()

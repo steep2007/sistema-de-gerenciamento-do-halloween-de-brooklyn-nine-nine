@@ -1,5 +1,4 @@
 from classes.detetive import Detetive
-
 class Alianca:
     def __init__(self):
         self.__detetivesAliados = []
