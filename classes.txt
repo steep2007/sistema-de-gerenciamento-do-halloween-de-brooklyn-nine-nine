@@ -1,2 +1,29 @@
 Aliança 1
 Detetives Aliados: Raymond e Amy
+ 
+Aliança 2
+Detetives Aliados: Jake e Charles
+ 
+Aliança 3
+Detetives Aliados: Jake e Terry
+ 
+Peça 1
+Detetive Responsável: Jake
+Descrição da Peça: O Mistério da Máscara Desaparecida - Uma máscara valiosa desapareceu de um museu e os participantes devem investigar pistas, seguir suspeitos e descobrir quem é o responsável pelo roubo.
+ 
+Peça 2
+Detetive Responsável: Amy
+Descrição da Peça: Espelhos Enganosos: Colocar espelhos estrategicamente posicionados para criar ilusões de ótica e confundir os detetives. Eles terão que superar as ilusões para encontrar pistas e resolver o roubo.
+ 
+Peça 3
+Detetive Responsável: Rosa
+Descrição da Peça: O Enigma do Fantasma do Armário na delegacia, um fantasma assombra o armário de evidências. Os participantes devem seguir as pistas e solucionar o enigma por trás do fantasma para acalmar os espíritos inquietos.
+ 
+Peça 4
+Detetive Responsável: Terry
+Descrição da Peça: A Aventura do Tesouro Assombrado - Uma lenda local fala de um tesouro escondido em um local supostamente assombrado. Os participantes devem enfrentar seus medos, decifrar charadas e encontrar o tesouro enquanto desvendam os segredos sombrios que cercam o local.
+ 
+Estratégia 1
+Detetive: Jake
+Estratégia: Espalhe informações falsas ou crie situações enganosas para induzir os outros competidores a cometerem erros.
+ 
