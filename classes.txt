@@ -63,3 +63,33 @@ Estratégia 1
 Detetive: Jake
 Estratégia: Espalhe informações falsas ou crie situações enganosas para induzir os outros competidores a cometerem erros.
  
+Regras 1
+Restrições Locais: Deve ocorrer dentro do Museu
+Duração: A duração é de um dia inteiro
+
+Regras 2
+Restrições Locais: Deve ocorrer dentro da Galeria de Arte
+Duração: A duração é de algumas horas
+
+Regras 3
+Restrições Locais: Deve ocorrer dentro da Delegacia
+Duração: A duração é de algumas horas à noite
+
+Ranking 1 
+Detetives e Pontuações: 
+Jake - 741
+Rosa - 568
+Charles - 243
+
+Ranking 2 
+Detetives e Pontuações: 
+Raymond - 1250
+Amy - 895
+Terry - 546
+
+Ranking 3 
+Detetives e Pontuações: 
+Amy - 890
+Terry - 315
+Rosa - 178
+

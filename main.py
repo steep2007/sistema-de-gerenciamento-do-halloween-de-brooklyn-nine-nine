@@ -52,25 +52,53 @@ class Arquivo:
 
             arquivo.write("Aliança 1\n")
             arquivo.write(f"Detetives Aliados: {alianca1.getDetetivesAliados()[0].getNome()} e {alianca1.getDetetivesAliados()[1].getNome()}\n \n")
+            
             arquivo.write("Aliança 2\n")
             arquivo.write(f"Detetives Aliados: {alianca2.getDetetivesAliados()[0].getNome()} e {alianca2.getDetetivesAliados()[1].getNome()}\n \n")
+            
             arquivo.write("Aliança 3\n")
             arquivo.write(f"Detetives Aliados: {alianca3.getDetetivesAliados()[0].getNome()} e {alianca3.getDetetivesAliados()[1].getNome()}\n \n")
+            
             arquivo.write("Peça 1\n")
             arquivo.write(f"Detetive Responsável: {peca1.getDetetiveResponsavel().getNome()}\n")
             arquivo.write(f"Descrição da Peça: {peca1.getDescricaoPeca()}\n \n")
+           
             arquivo.write("Peça 2\n")
             arquivo.write(f"Detetive Responsável: {peca2.getDetetiveResponsavel().getNome()}\n")
             arquivo.write(f"Descrição da Peça: {peca2.getDescricaoPeca()}\n \n")
+            
             arquivo.write("Peça 3\n")
             arquivo.write(f"Detetive Responsável: {peca3.getDetetiveResponsavel().getNome()}\n")
             arquivo.write(f"Descrição da Peça: {peca3.getDescricaoPeca()}\n \n")
+            
             arquivo.write("Peça 4\n")
             arquivo.write(f"Detetive Responsável: {peca4.getDetetiveResponsavel().getNome()}\n")
             arquivo.write(f"Descrição da Peça: {peca4.getDescricaoPeca()}\n \n")
+
             arquivo.write("Estratégia 1\n")
             arquivo.write(f'Detetive: {estrategia1.getDetetive().getNome()}\n')
             arquivo.write(f'Estratégia: {estrategia1.getListaAcoes()}\n \n')
+
+            arquivo.write("Regras 1\n")
+            arquivo.write("Restrições Locais: {}\n".format(regras1.getRestricoesLocal()))
+            arquivo.write("Duração: {}\n\n".format(regras1.getDuracao()))
+
+            arquivo.write("Regras 2\n")
+            arquivo.write("Restrições Locais: {}\n".format(regras2.getRestricoesLocal()))
+            arquivo.write("Duração: {}\n\n".format(regras2.getDuracao()))
+
+            arquivo.write("Regras 3\n")
+            arquivo.write("Restrições Locais: {}\n".format(regras3.getRestricoesLocal()))
+            arquivo.write("Duração: {}\n\n".format(regras3.getDuracao()))
+
+            arquivo.write("Ranking 1 \n")
+            arquivo.write(f"Detetives e Pontuações: \n{ranking1.getListaDetetives()[0].getNome()} - {ranking1.getPontuacoes()[0]}\n{ranking1.getListaDetetives()[1].getNome()} - {ranking1.getPontuacoes()[1]}\n{ranking1.getListaDetetives()[2].getNome()} - {ranking1.getPontuacoes()[2]}\n\n")
+
+            arquivo.write("Ranking 2 \n")
+            arquivo.write(f"Detetives e Pontuações: \n{ranking2.getListaDetetives()[0].getNome()} - {ranking2.getPontuacoes()[0]}\n{ranking2.getListaDetetives()[1].getNome()} - {ranking2.getPontuacoes()[1]}\n{ranking2.getListaDetetives()[2].getNome()} - {ranking2.getPontuacoes()[2]}\n\n")
+
+            arquivo.write("Ranking 3 \n")
+            arquivo.write(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n\n")
 
 detetive1 = Detetive()
 detetive1.setNome("Jake")
