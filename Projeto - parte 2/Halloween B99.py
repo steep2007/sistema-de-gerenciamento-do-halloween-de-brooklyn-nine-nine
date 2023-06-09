@@ -348,8 +348,6 @@ print("Competição 2")
 print(f"Participantes: {competicao2.getListaParticipantes()[0].getNome()}, {competicao2.getListaParticipantes()[1].getNome()}, {competicao2.getListaParticipantes()[2].getNome()}, {competicao2.getListaParticipantes()[3].getNome()}, {competicao2.getListaParticipantes()[4].getNome()}")
 print(f"Data da Competição: {competicao2.getDataCompeticao()}\n")
 
-print(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}, {competicao1.getListaParticipantes()[4].getNome()}\n")
-
 competicao3 = Competicao()
 competicao3.setListaParticipantes(detetive1)
 competicao3.setListaParticipantes(detetive2)
@@ -361,8 +359,6 @@ competicao3.setDataCompeticao("31/10/2018 - Edição Atual")
 print("Competição 3")
 print(f"Participantes: {competicao3.getListaParticipantes()[0].getNome()}, {competicao3.getListaParticipantes()[1].getNome()}, {competicao3.getListaParticipantes()[2].getNome()}, {competicao3.getListaParticipantes()[3].getNome()}, {competicao3.getListaParticipantes()[4].getNome()}, {competicao3.getListaParticipantes()[5].getNome()}")
 print(f"Data da Competição: {competicao3.getDataCompeticao()}\n")
-print(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}, {competicao1.getListaParticipantes()[4].getNome()}, {competicao1.getListaParticipantes()[5].getNome()} \n")
-
 
 ranking1 = Ranking()
 ranking1.setListaDetetives(detetive1)
@@ -393,3 +389,4 @@ ranking3.setPontuacoes(315)
 ranking3.setPontuacoes(178)
 print("Ranking 3")
 print(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n")
+
