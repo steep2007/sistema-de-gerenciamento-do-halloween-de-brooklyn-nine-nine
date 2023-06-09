@@ -52,25 +52,72 @@ class Arquivo:
 
             arquivo.write("Aliança 1\n")
             arquivo.write(f"Detetives Aliados: {alianca1.getDetetivesAliados()[0].getNome()} e {alianca1.getDetetivesAliados()[1].getNome()}\n \n")
+
             arquivo.write("Aliança 2\n")
             arquivo.write(f"Detetives Aliados: {alianca2.getDetetivesAliados()[0].getNome()} e {alianca2.getDetetivesAliados()[1].getNome()}\n \n")
+
             arquivo.write("Aliança 3\n")
             arquivo.write(f"Detetives Aliados: {alianca3.getDetetivesAliados()[0].getNome()} e {alianca3.getDetetivesAliados()[1].getNome()}\n \n")
+
             arquivo.write("Peça 1\n")
             arquivo.write(f"Detetive Responsável: {peca1.getDetetiveResponsavel().getNome()}\n")
             arquivo.write(f"Descrição da Peça: {peca1.getDescricaoPeca()}\n \n")
+
             arquivo.write("Peça 2\n")
             arquivo.write(f"Detetive Responsável: {peca2.getDetetiveResponsavel().getNome()}\n")
             arquivo.write(f"Descrição da Peça: {peca2.getDescricaoPeca()}\n \n")
+
             arquivo.write("Peça 3\n")
             arquivo.write(f"Detetive Responsável: {peca3.getDetetiveResponsavel().getNome()}\n")
             arquivo.write(f"Descrição da Peça: {peca3.getDescricaoPeca()}\n \n")
+
             arquivo.write("Peça 4\n")
             arquivo.write(f"Detetive Responsável: {peca4.getDetetiveResponsavel().getNome()}\n")
             arquivo.write(f"Descrição da Peça: {peca4.getDescricaoPeca()}\n \n")
+
             arquivo.write("Estratégia 1\n")
             arquivo.write(f'Detetive: {estrategia1.getDetetive().getNome()}\n')
             arquivo.write(f'Estratégia: {estrategia1.getListaAcoes()}\n \n')
+
+            arquivo.write("Estratégia 2\n")
+            arquivo.write(f'Detetive: {estrategia2.getDetetive().getNome()}\n')
+            arquivo.write(f'Estratégia: {estrategia2.getListaAcoes()}\n \n')
+
+            arquivo.write("Estratégia 3\n")
+            arquivo.write(f'Detetive: {estrategia3.getDetetive().getNome()}\n')
+            arquivo.write(f'Estratégia: {estrategia3.getListaAcoes()} \n \n')
+
+            arquivo.write("Estratégia 4\n")
+            arquivo.write(f'Detetive: {estrategia4.getDetetive().getNome()}\n')
+            arquivo.write(f'Estratégia: {estrategia4.getListaAcoes()} \n \n')
+
+            arquivo.write("Competição 1\n")
+            arquivo.write(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}\n")
+            arquivo.write(f"Data da Competição: {competicao1.getDataCompeticao()}\n \n")
+
+            arquivo.write("Competição 2\n")
+            arquivo.write(f"Participantes: {competicao2.getListaParticipantes()[0].getNome()}, {competicao2.getListaParticipantes()[1].getNome()}, {competicao2.getListaParticipantes()[2].getNome()}, {competicao2.getListaParticipantes()[3].getNome()}, {competicao2.getListaParticipantes()[4].getNome()}, {competicao2.getListaParticipantes()[5].getNome()}\n")
+            arquivo.write(f"Data da Competição: {competicao2.getDataCompeticao()}\n \n")
+
+            arquivo.write("Competição 3\n")
+            arquivo.write(f"Participantes: {competicao3.getListaParticipantes()[0].getNome()}, {competicao3.getListaParticipantes()[1].getNome()}, {competicao3.getListaParticipantes()[2].getNome()}, {competicao3.getListaParticipantes()[3].getNome()}, {competicao3.getListaParticipantes()[4].getNome()}, {competicao3.getListaParticipantes()[5].getNome()}\n")
+            arquivo.write(f"Data da Competição: {competicao3.getDataCompeticao()}\n \n")
+
+            arquivo.write("Vencedor 1\n")
+            arquivo.write(f"Detetive Vencedor: {trofeu1.getDetetiveVencedor().getNome()}\n")
+            arquivo.write(f"Ano da Vitória: {trofeu1.getAnoVitoria().getDataCompeticao()}\n")
+            arquivo.write(f"Frase da Vitória: {trofeu1.getFraseVitoria()}\n \n")
+
+            arquivo.write("Vencedor 2\n")
+            arquivo.write(f"Detetive Vencedor: {trofeu2.getDetetiveVencedor().getNome()}\n")
+            arquivo.write(f"Ano da Vitória: {trofeu2.getAnoVitoria().getDataCompeticao()}\n")
+            arquivo.write(f"Frase da Vitória: {trofeu2.getFraseVitoria()}\n \n")
+
+            arquivo.write("Vencedor 3\n")
+            arquivo.write(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}\n")
+            arquivo.write(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}\n")
+            arquivo.write(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n \n")
+
 
 detetive1 = Detetive()
 detetive1.setNome("Jake")
