@@ -205,9 +205,9 @@ class Arquivo:
         textoTrofeu = self.lerTrofeu()
         comandos = conexao.cursor()  # Cria um objeto cursor para executar comandos SQL
         comandos.execute(f"INSERT INTO {table} (nome) values ('{textoDetetive}')")  # Executa um comando SQL para inserir o texto no banco de dados
-        comandos.execute(f"INSERT INTO {table} (sobrenome) values ('{textoAlianca}')")
-        comandos.execute(f"INSERT INTO {table} (cargo) values ('{textoCompeticao}')")
-        comandos.execute(f"INSERT INTO {table} (participacaoAnterior) values ('{textoEstrategia}')")
+        comandos.execute(f"INSERT INTO {table} (sobrenome) values ('{textoDetetive}')")
+        comandos.execute(f"INSERT INTO {table} (cargo) values ('{textoDetetive}')")
+        comandos.execute(f"INSERT INTO {table} (participacaoAnterior) values ('{textoDetetive}')")
         # comandos.execute(f"INSERT INTO {table} (peca) values ('{textoPeca}')")
         # comandos.execute(f"INSERT INTO {table} (ranking) values ('{textoRanking}')")
         # comandos.execute(f"INSERT INTO {table} (regras) values ('{textoRegras}')")
