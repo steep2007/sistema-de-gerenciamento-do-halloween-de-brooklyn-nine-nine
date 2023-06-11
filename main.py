@@ -53,7 +53,7 @@ class Arquivo:
             return trofeu.read()
 
     def escreverDetetive(self):
-        with open("detetive.txt", "w") as detetive:
+        with open(self.detetive, "w") as detetive:
             detetive.write("Detetive 1\n")
             detetive.write("Nome: {}\n".format(detetive1.getNome()))
             detetive.write("Sobrenome: {}\n".format(detetive1.getSobrenome()))
@@ -91,7 +91,7 @@ class Arquivo:
             detetive.write("Participação Anterior: {}\n\n".format(detetive6.getParticipacaoAnterior()))
 
     def escreverAlianca(self):
-        with open("alianca.txt", "w") as alianca:
+        with open(self.alianca, "w") as alianca:
             alianca.write("Aliança 1\n")
             alianca.write(f"Detetives Aliados: {alianca1.getDetetivesAliados()[0].getNome()} e {alianca1.getDetetivesAliados()[1].getNome()}\n \n")
 
@@ -102,7 +102,7 @@ class Arquivo:
             alianca.write(f"Detetives Aliados: {alianca3.getDetetivesAliados()[0].getNome()} e {alianca3.getDetetivesAliados()[1].getNome()}\n \n")
 
     def escreverPeca(self):
-        with open("peca.txt", "w") as peca:
+        with open(self.peca, "w") as peca:
             peca.write("Peça 1\n")
             peca.write(f"Detetive Responsável: {peca1.getDetetiveResponsavel().getNome()}\n")
             peca.write(f"Descrição da Peça: {peca1.getDescricaoPeca()}\n \n")
@@ -120,7 +120,7 @@ class Arquivo:
             peca.write(f"Descrição da Peça: {peca4.getDescricaoPeca()}\n \n")
 
     def escreverEstrategia(self):
-        with open("estrategia.txt", "w") as estrategia:
+        with open(self.estrategia, "w") as estrategia:
             estrategia.write("Estratégia 1\n")
             estrategia.write(f'Detetive: {estrategia1.getDetetive().getNome()}\n')
             estrategia.write(f'Estratégia: {estrategia1.getListaAcoes()}\n \n')
@@ -138,7 +138,7 @@ class Arquivo:
             estrategia.write(f'Estratégia: {estrategia4.getListaAcoes()} \n \n')
 
     def escreverRegra(self):
-        with open("regras.txt", "w") as regras:
+        with open(self.regras, "w") as regras:
             regras.write("Regras 1\n")
             regras.write("Restrições Locais: {}\n".format(regras1.getRestricoesLocal()))
             regras.write("Duração: {}\n\n".format(regras1.getDuracao()))
@@ -152,7 +152,7 @@ class Arquivo:
             regras.write("Duração: {}\n\n".format(regras3.getDuracao()))
 
     def escreverCompeticao(self):
-        with open("competicao.txt", "w") as competicao:
+        with open(self.competicao, "w") as competicao:
             competicao.write("Competição 1\n")
             competicao.write(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}\n")
             competicao.write(f"Data da Competição: {competicao1.getDataCompeticao()}\n \n")
@@ -166,7 +166,7 @@ class Arquivo:
             competicao.write(f"Data da Competição: {competicao3.getDataCompeticao()}\n \n")
 
     def escreverRanking(self):
-        with open("ranking.txt", "w") as ranking:
+        with open(self.ranking, "w") as ranking:
             ranking.write("Ranking 1 \n")
             ranking.write(f"Detetives e Pontuações: \n{ranking1.getListaDetetives()[0].getNome()} - {ranking1.getPontuacoes()[0]}\n{ranking1.getListaDetetives()[1].getNome()} - {ranking1.getPontuacoes()[1]}\n{ranking1.getListaDetetives()[2].getNome()} - {ranking1.getPontuacoes()[2]}\n\n")
 
@@ -177,7 +177,7 @@ class Arquivo:
             ranking.write(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n\n")
 
     def escreverTrofeu(self):
-        with open("trofeu.txt", "w") as trofeu:
+        with open(self.trofeu, "w") as trofeu:
             trofeu.write("Vencedor 1\n")
             trofeu.write(f"Detetive Vencedor: {trofeu1.getDetetiveVencedor().getNome()}\n")
             trofeu.write(f"Ano da Vitória: {trofeu1.getAnoVitoria().getDataCompeticao()}\n")
@@ -196,14 +196,14 @@ class Arquivo:
     def escreverBanco(self, banco, ip, usuario, senha, table):
         conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco) # Estabelece a conexão com o banco de dados
 
-        textoDetetive = lerDetetive()  # Lê o conteúdo do arquivo
-        textoAlianca = lerAlianca()
-        textoCompeticao = lerCompeticao()
-        textoEstrategia = lerEstrategia()
-        textoPeca = lerPeca()
-        textoRanking = lerRanking()
-        textoRegras = lerRegras()
-        textoTrofeu = lerTrofeu()
+        textoDetetive = self.lerDetetive()  # Lê o conteúdo do arquivo
+        textoAlianca = self.lerAlianca()
+        textoCompeticao = self.lerCompeticao()
+        textoEstrategia = self.lerEstrategia()
+        textoPeca = self.lerPeca()
+        textoRanking = self.lerRanking()
+        textoRegras = self.lerRegras()
+        textoTrofeu = self.lerTrofeu()
         comandos = conexao.cursor()  # Cria um objeto cursor para executar comandos SQL
         comandos.execute(f"INSERT INTO {table} (detetive) values ('{textoDetetive}')")  # Executa um comando SQL para inserir o texto no banco de dados
         comandos.execute(f"INSERT INTO {table} (alianca) values ('{textoAlianca}')")
@@ -493,7 +493,7 @@ print(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}")
 print(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}")
 print(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n")
 
-arq = Arquivo()
+arq = Arquivo("detetive.txt", "alinca.txt", "competicao.txt", "estrategia.txt", "peca.txt", "ranking.txt", "regras.txt", "trofeu.txt")
 arq.escreverDetetive()
 arq.escreverAlianca()
 arq.escreverPeca()
