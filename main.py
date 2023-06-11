@@ -53,88 +53,71 @@ class Arquivo:
 
     def escreverDetetive(self, textoDetetive):
         with open(self.detetive, "w") as detetive:
-            detetive.write("Detetive 1\n")
-            detetive.write("Nome: {}\n".format(detetive1.getNome()))
-            detetive.write("Sobrenome: {}\n".format(detetive1.getSobrenome()))
-            detetive.write("Cargo: {}\n".format(detetive1.getCargo()))
-            detetive.write("Participação Anterior: {}\n\n".format(detetive1.getParticipacaoAnterior()))
+            detetive.write(detetive1.getNome())
+            detetive.write(detetive1.getSobrenome())
+            detetive.write(detetive1.getCargo())
+            detetive.write(detetive1.getParticipacaoAnterior())
 
-            detetive.write("Detetive 2\n")
-            detetive.write("Nome: {}\n".format(detetive2.getNome()))
-            detetive.write("Sobrenome: {}\n".format(detetive2.getSobrenome()))
-            detetive.write("Cargo: {}\n".format(detetive2.getCargo()))
-            detetive.write("Participação Anterior: {}\n\n".format(detetive2.getParticipacaoAnterior()))
+            detetive.write(detetive2.getNome())
+            detetive.write(detetive2.getSobrenome())
+            detetive.write(detetive2.getCargo())
+            detetive.write(detetive2.getParticipacaoAnterior())
 
-            detetive.write("Detetive 3\n")
-            detetive.write("Nome: {}\n".format(detetive3.getNome()))
-            detetive.write("Sobrenome: {}\n".format(detetive3.getSobrenome()))
-            detetive.write("Cargo: {}\n".format(detetive3.getCargo()))
-            detetive.write("Participação Anterior: {}\n\n".format(detetive3.getParticipacaoAnterior()))
+            detetive.write(detetive3.getNome())
+            detetive.write(detetive3.getSobrenome())
+            detetive.write(detetive3.getCargo())
+            detetive.write(detetive3.getParticipacaoAnterior())
 
-            detetive.write("Detetive 4\n")
-            detetive.write("Nome: {}\n".format(detetive4.getNome()))
-            detetive.write("Sobrenome: {}\n".format(detetive4.getSobrenome()))
-            detetive.write("Cargo: {}\n".format(detetive4.getCargo()))
-            detetive.write("Participação Anterior: {}\n\n".format(detetive4.getParticipacaoAnterior()))
+            detetive.write(detetive4.getNome())
+            detetive.write(detetive4.getSobrenome())
+            detetive.write(detetive4.getCargo())
+            detetive.write(detetive4.getParticipacaoAnterior())
 
-            detetive.write("Detetive 5\n")
-            detetive.write("Nome: {}\n".format(detetive5.getNome()))
-            detetive.write("Sobrenome: {}\n".format(detetive5.getSobrenome()))
-            detetive.write("Cargo: {}\n".format(detetive5.getCargo()))
-            detetive.write("Participação Anterior: {}\n\n".format(detetive5.getParticipacaoAnterior()))
+            detetive.write(detetive5.getNome())
+            detetive.write(detetive5.getSobrenome())
+            detetive.write(detetive5.getCargo())
+            detetive.write(detetive5.getParticipacaoAnterior())
 
-            detetive.write("Detetive 6\n")
-            detetive.write("Nome: {}\n".format(detetive6.getNome()))
-            detetive.write("Sobrenome: {}\n".format(detetive6.getSobrenome()))
-            detetive.write("Cargo: {}\n".format(detetive6.getCargo()))
-            detetive.write("Participação Anterior: {}\n\n".format(detetive6.getParticipacaoAnterior()))
+            detetive.write(detetive6.getNome())
+            detetive.write(detetive6.getSobrenome())
+            detetive.write(detetive6.getCargo())
+            detetive.write(detetive6.getParticipacaoAnterior())
 
     def escreverAlianca(self, textoAlianca):
         with open(self.alianca, "w") as alianca:
-            alianca.write("Aliança 1\n")
-            alianca.write(f"Detetives Aliados: {alianca1.getDetetivesAliados()[0].getNome()} e {alianca1.getDetetivesAliados()[1].getNome()}\n \n")
+            alianca.write(alianca1.getDetetivesAliados()[0].getNome(), alianca1.getDetetivesAliados()[1].getNome())
 
-            alianca.write("Aliança 2\n")
-            alianca.write(f"Detetives Aliados: {alianca2.getDetetivesAliados()[0].getNome()} e {alianca2.getDetetivesAliados()[1].getNome()}\n \n")
+            alianca.write(alianca2.getDetetivesAliados()[0].getNome(), alianca2.getDetetivesAliados()[1].getNome())
 
-            alianca.write("Aliança 3\n")
-            alianca.write(f"Detetives Aliados: {alianca3.getDetetivesAliados()[0].getNome()} e {alianca3.getDetetivesAliados()[1].getNome()}\n \n")
+            alianca.write(alianca3.getDetetivesAliados()[0].getNome(), alianca3.getDetetivesAliados()[1].getNome())
 
     def escreverPeca(self, textoPeca):
         with open(self.peca, "w") as peca:
-            peca.write("Peça 1\n")
-            peca.write(f"Detetive Responsável: {peca1.getDetetiveResponsavel().getNome()}\n")
-            peca.write(f"Descrição da Peça: {peca1.getDescricaoPeca()}\n \n")
+            peca.write(peca1.getDetetiveResponsavel().getNome())
+            peca.write(peca1.getDescricaoPeca())
 
-            peca.write("Peça 2\n")
-            peca.write(f"Detetive Responsável: {peca2.getDetetiveResponsavel().getNome()}\n")
-            peca.write(f"Descrição da Peça: {peca2.getDescricaoPeca()}\n \n")
+            peca.write(peca2.getDetetiveResponsavel().getNome())
+            peca.write(peca2.getDescricaoPeca())
 
-            peca.write("Peça 3\n")
-            peca.write(f"Detetive Responsável: {peca3.getDetetiveResponsavel().getNome()}\n")
-            peca.write(f"Descrição da Peça: {peca3.getDescricaoPeca()}\n \n")
+            peca.write(peca3.getDetetiveResponsavel().getNome())
+            peca.write(peca3.getDescricaoPeca())
 
-            peca.write("Peça 4\n")
-            peca.write(f"Detetive Responsável: {peca4.getDetetiveResponsavel().getNome()}\n")
-            peca.write(f"Descrição da Peça: {peca4.getDescricaoPeca()}\n \n")
+            peca.write(peca4.getDetetiveResponsavel().getNome())
+            peca.write(peca4.getDescricaoPeca())
 
     def escreverEstrategia(self, textoEstrategia):
         with open(self.estrategia, "w") as estrategia:
-            estrategia.write("Estratégia 1\n")
-            estrategia.write(f'Detetive: {estrategia1.getDetetive().getNome()}\n')
-            estrategia.write(f'Estratégia: {estrategia1.getListaAcoes()}\n \n')
+            estrategia.write(estrategia1.getDetetive().getNome())
+            estrategia.write(estrategia1.getListaAcoes())
 
-            estrategia.write("Estratégia 2\n")
-            estrategia.write(f'Detetive: {estrategia2.getDetetive().getNome()}\n')
-            estrategia.write(f'Estratégia: {estrategia2.getListaAcoes()}\n \n')
+            estrategia.write(estrategia2.getDetetive().getNome())
+            estrategia.write(estrategia2.getListaAcoes())
 
-            estrategia.write("Estratégia 3\n")
-            estrategia.write(f'Detetive: {estrategia3.getDetetive().getNome()}\n')
-            estrategia.write(f'Estratégia: {estrategia3.getListaAcoes()} \n \n')
+            estrategia.write(estrategia3.getDetetive().getNome())
+            estrategia.write(estrategia3.getListaAcoes())
 
-            estrategia.write("Estratégia 4\n")
-            estrategia.write(f'Detetive: {estrategia4.getDetetive().getNome()}\n')
-            estrategia.write(f'Estratégia: {estrategia4.getListaAcoes()} \n \n')
+            estrategia.write(estrategia4.getDetetive().getNome())
+            estrategia.write(estrategia4.getListaAcoes())
 
     def escreverRegra(self, textoRegras):
         with open(self.regras, "w") as regras:
