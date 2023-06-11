@@ -1,5 +1,3 @@
-import mysql.connector
-
 from classes.detetive import Detetive
 from classes.alianca import Alianca
 from classes.peca import Peca
@@ -10,7 +8,6 @@ from classes.ranking import Ranking
 from classes.trofeu import Trofeu
 
 import mysql.connector
-
 class Arquivo:
     def __init__(self, detetive, alianca, competicao, estrategia, peca, ranking, regras, trofeu):
         self.detetive = detetive  # Armazena o nome do arquivo como atributo do objeto
@@ -195,8 +192,9 @@ class Arquivo:
             trofeu.write(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}\n")
             trofeu.write(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n \n")
 
+class ConexaoBanco:
     def escreverBanco(self, banco, ip, usuario, senha, table):
-        conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco) # Estabelece a conexão com o banco de dados
+        conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco)  # Estabelece a conexão com o banco de dados
 
         textoDetetive = self.lerDetetive()  # Lê o conteúdo do arquivo
         textoAlianca = self.lerAlianca()
@@ -217,6 +215,7 @@ class Arquivo:
         comandos.execute(f"INSERT INTO {table} (trofeu) values ('{textoTrofeu}')")
         conexao.commit()  # Confirma a transação no banco de dados
         conexao.close()  # Fecha a conexão com o banco de dados
+
 
     def lerBanco(self, banco, ip, usuario, senha):
         conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco)
@@ -495,7 +494,7 @@ print(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}")
 print(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}")
 print(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n")
 
-arq = Arquivo("detetive.txt", "alinca.txt", "competicao.txt", "estrategia.txt", "peca.txt", "ranking.txt", "regras.txt", "trofeu.txt")
+arq = Arquivo("detetive.txt", "alianca.txt", "competicao.txt", "estrategia.txt", "peca.txt", "ranking.txt", "regras.txt", "trofeu.txt")
 arq.escreverDetetive()
 arq.escreverAlianca()
 arq.escreverPeca()
@@ -504,12 +503,14 @@ arq.escreverRegra()
 arq.escreverCompeticao()
 arq.escreverRanking()
 arq.escreverTrofeu()
-arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
-arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
-arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
-arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
-arq.escreverBanco("Classes", "localhost", "root", "", "peca")
-arq.escreverBanco("Classes", "localhost", "root", "", "ranking")
-arq.escreverBanco("Classes", "localhost", "root", "", "regras")
-arq.escreverBanco("Classes", "localhost", "root", "", "trofeu")
-arq.lerBanco("Classes", "localhost", "root", "")
+
+arqBanco = ConexaoBanco()
+arqBanco.escreverBanco("Classes", "localhost", "root", "", "detetive")
+arqBanco.escreverBanco("Classes", "localhost", "root", "", "alianca")
+arqBanco.escreverBanco("Classes", "localhost", "root", "", "competicao")
+arqBanco.escreverBanco("Classes", "localhost", "root", "", "estrategia")
+arqBanco.escreverBanco("Classes", "localhost", "root", "", "peca")
+arqBanco.escreverBanco("Classes", "localhost", "root", "", "ranking")
+arqBanco.escreverBanco("Classes", "localhost", "root", "", "regras")
+arqBanco.escreverBanco("Classes", "localhost", "root", "", "trofeu")
+arqBanco.lerBanco("Classes", "localhost", "root", "")
