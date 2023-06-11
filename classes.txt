@@ -1,0 +1,134 @@
+Detetive 1
+Nome: Jake
+Sobrenome: Peralta
+Cargo: Detetive de Homicídios
+Participação Anterior: Perdedor
+
+Detetive 2
+Nome: Amy
+Sobrenome: Santiago
+Cargo: Detetive de Homicídios
+Participação Anterior: Perdedor
+
+Detetive 3
+Nome: Rosa
+Sobrenome: Diaz
+Cargo: Detetive de Homicídios
+Participação Anterior: Perdedor
+
+Detetive 4
+Nome: Terry
+Sobrenome: Jeffords
+Cargo: Sargento de Polícia
+Participação Anterior: Perdedor
+
+Detetive 5
+Nome: Charles
+Sobrenome: Boyle
+Cargo: Detetive de Homicídios
+Participação Anterior: Perdedor
+
+Detetive 6
+Nome: Raymond
+Sobrenome: Holt
+Cargo: Capitão de Polícia
+Participação Anterior: Vencedor
+
+Aliança 1
+Detetives Aliados: Raymond e Amy
+ 
+Aliança 2
+Detetives Aliados: Jake e Charles
+ 
+Aliança 3
+Detetives Aliados: Jake e Terry
+ 
+Peça 1
+Detetive Responsável: Jake
+Descrição da Peça: O Mistério da Máscara Desaparecida - Uma máscara valiosa desapareceu de um museu e os participantes devem investigar pistas, seguir suspeitos e descobrir quem é o responsável pelo roubo.
+ 
+Peça 2
+Detetive Responsável: Amy
+Descrição da Peça: Espelhos Enganosos: Colocar espelhos estrategicamente posicionados para criar ilusões de ótica e confundir os detetives. Eles terão que superar as ilusões para encontrar pistas e resolver o roubo.
+ 
+Peça 3
+Detetive Responsável: Rosa
+Descrição da Peça: O Enigma do Fantasma do Armário na delegacia, um fantasma assombra o armário de evidências. Os participantes devem seguir as pistas e solucionar o enigma por trás do fantasma para acalmar os espíritos inquietos.
+ 
+Peça 4
+Detetive Responsável: Terry
+Descrição da Peça: A Aventura do Tesouro Assombrado - Uma lenda local fala de um tesouro escondido em um local supostamente assombrado. Os participantes devem enfrentar seus medos, decifrar charadas e encontrar o tesouro enquanto desvendam os segredos sombrios que cercam o local.
+ 
+Estratégia 1
+Detetive: Jake
+Estratégia: Espalhe informações falsas ou crie situações enganosas para induzir os outros competidores a cometerem erros.
+ 
+Estratégia 2
+Detetive: Raymond
+Estratégia: Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas.
+ 
+Estratégia 3
+Detetive: Amy
+Estratégia: Planeje um evento chamativo e divertido para desviar a atenção dos competidores, enquanto avançam nas tarefas. 
+ 
+Estratégia 4
+Detetive: Rosa
+Estratégia: Se disfarce como funcionários de um local específico para obter acesso privilegiado e informações valiosas que possam ajudá-lo. 
+ 
+Regras 1
+Restrições Locais: Deve ocorrer dentro do Museu
+Duração: A duração é de um dia inteiro
+
+Regras 2
+Restrições Locais: Deve ocorrer dentro da Galeria de Arte
+Duração: A duração é de algumas horas
+
+Regras 3
+Restrições Locais: Deve ocorrer dentro da Delegacia
+Duração: A duração é de algumas horas à noite
+
+Competição 1
+Participantes: Jake, Amy, Rosa, Terry
+Data da Competição: 31/10/2016
+ 
+Competição 2
+Participantes: Jake, Amy, Rosa, Terry, Charles, Raymond
+Data da Competição: 31/10/2017
+ 
+Competição 3
+Participantes: Jake, Amy, Rosa, Terry, Charles, Raymond
+Data da Competição: 31/10/2018 - Edição Atual
+ 
+Ranking 1 
+Detetives e Pontuações: 
+Jake - 741
+Rosa - 568
+Charles - 243
+
+Ranking 2 
+Detetives e Pontuações: 
+Raymond - 1250
+Amy - 895
+Terry - 546
+
+Ranking 3 
+Detetives e Pontuações: 
+Amy - 890
+Terry - 315
+Rosa - 178
+
+Vencedor 1
+Detetive Vencedor: Jake
+Ano da Vitória: 31/10/2016
+Frase da Vitória: O detetive Peralta é um sensacional detetine/gênio!
+ 
+Vencedor 2
+Detetive Vencedor: Raymond
+Ano da Vitória: 31/10/2017
+Frase da Vitória: O capitão de polícia Holt é um ótimo detetine/gênio!
+ 
+Vencedor 3
+Detetive Vencedor: Amy
+Ano da Vitória: 31/10/2018 - Edição Atual
+Frase da Vitória: Amy Santiago é uma detetive incrível/gênio!
+ 

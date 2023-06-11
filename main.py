@@ -10,10 +10,48 @@ from classes.trofeu import Trofeu
 import mysql.connector
 
 class Arquivo:
-    def lerArquivo(self):
+    # def __init__(self, detetive, alianca, competicao, estrategia, peca, ranking, regras, trofeu):
+    #     self.detetive = detetive  # Armazena o nome do arquivo como atributo do objeto
+    #     self.alianca = alianca
+    #     self.competicao = competicao
+    #     self.estrategia = estrategia
+    #     self.peca = peca
+    #     self.ranking = ranking
+    #     self.regras = regras
+    #     self.trofeu = trofeu
+
+    def lerDetetive(self):
         with open("detetive.txt", "r") as detetive:
-            conteudo = detetive.read()
-            return conteudo
+            return detetive.read()
+
+    def lerAlianca(self):
+        with open("alianca.txt", "r") as alianca:
+            return alianca.read()
+
+    def lerCompeticao(self):
+        with open("competicao.txt", "r") as competicao:
+            return competicao.read()
+
+    def lerEstrategia(self):
+        with open("estrategia.txt", "r") as estrategia:
+            return estrategia.read()
+
+    def lerPeca(self):
+        with open("peca.txt", "r") as peca:
+            return peca.read()
+
+    def lerRanking(self):
+        with open("ranking.txt", "r") as ranking:
+            return ranking.read()
+
+    def lerRegras(self):
+        with open("regras.txt", "r") as regras:
+            return regras.read()
+
+    def lerTrofeu(self):
+        with open("trofeu.txt", "r") as trofeu:
+            return trofeu.read()
+
     def escreverDetetive(self):
         with open("detetive.txt", "w") as detetive:
             detetive.write("Detetive 1\n")
@@ -81,23 +119,23 @@ class Arquivo:
             peca.write(f"Detetive Responsável: {peca4.getDetetiveResponsavel().getNome()}\n")
             peca.write(f"Descrição da Peça: {peca4.getDescricaoPeca()}\n \n")
 
-    def escreverEstratregia(self):
-        with open("estratregia.txt", "w") as estratregia:
-            estratregia.write("Estratégia 1\n")
-            estratregia.write(f'Detetive: {estrategia1.getDetetive().getNome()}\n')
-            estratregia.write(f'Estratégia: {estrategia1.getListaAcoes()}\n \n')
+    def escreverEstrategia(self):
+        with open("estrategia.txt", "w") as estrategia:
+            estrategia.write("Estratégia 1\n")
+            estrategia.write(f'Detetive: {estrategia1.getDetetive().getNome()}\n')
+            estrategia.write(f'Estratégia: {estrategia1.getListaAcoes()}\n \n')
 
-            estratregia.write("Estratégia 2\n")
-            estratregia.write(f'Detetive: {estrategia2.getDetetive().getNome()}\n')
-            estratregia.write(f'Estratégia: {estrategia2.getListaAcoes()}\n \n')
+            estrategia.write("Estratégia 2\n")
+            estrategia.write(f'Detetive: {estrategia2.getDetetive().getNome()}\n')
+            estrategia.write(f'Estratégia: {estrategia2.getListaAcoes()}\n \n')
 
-            estratregia.write("Estratégia 3\n")
-            estratregia.write(f'Detetive: {estrategia3.getDetetive().getNome()}\n')
-            estratregia.write(f'Estratégia: {estrategia3.getListaAcoes()} \n \n')
+            estrategia.write("Estratégia 3\n")
+            estrategia.write(f'Detetive: {estrategia3.getDetetive().getNome()}\n')
+            estrategia.write(f'Estratégia: {estrategia3.getListaAcoes()} \n \n')
 
-            estratregia.write("Estratégia 4\n")
-            estratregia.write(f'Detetive: {estrategia4.getDetetive().getNome()}\n')
-            estratregia.write(f'Estratégia: {estrategia4.getListaAcoes()} \n \n')
+            estrategia.write("Estratégia 4\n")
+            estrategia.write(f'Detetive: {estrategia4.getDetetive().getNome()}\n')
+            estrategia.write(f'Estratégia: {estrategia4.getListaAcoes()} \n \n')
 
     def escreverRegra(self):
         with open("regras.txt", "w") as regras:
@@ -154,6 +192,46 @@ class Arquivo:
             trofeu.write(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}\n")
             trofeu.write(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}\n")
             trofeu.write(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n \n")
+
+    def escreverBanco(self, banco, ip, usuario, senha, table):
+        conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco) # Estabelece a conexão com o banco de dados
+
+        textoDetetive = lerDetetive()  # Lê o conteúdo do arquivo
+        textoAlianca = lerAlianca()
+        textoCompeticao = lerCompeticao()
+        textoEstrategia = lerEstrategia()
+        textoPeca = lerPeca()
+        textoRanking = lerRanking()
+        textoRegras = lerRegras()
+        textoTrofeu = lerTrofeu()
+        comandos = conexao.cursor()  # Cria um objeto cursor para executar comandos SQL
+        comandos.execute(f"INSERT INTO {table} (detetive) values ('{textoDetetive}')")  # Executa um comando SQL para inserir o texto no banco de dados
+        comandos.execute(f"INSERT INTO {table} (alianca) values ('{textoAlianca}')")
+        comandos.execute(f"INSERT INTO {table} (competicao) values ('{textoCompeticao}')")
+        comandos.execute(f"INSERT INTO {table} (estrategia) values ('{textoEstrategia}')")
+        comandos.execute(f"INSERT INTO {table} (peca) values ('{textoPeca}')")
+        comandos.execute(f"INSERT INTO {table} (ranking) values ('{textoRanking}')")
+        comandos.execute(f"INSERT INTO {table} (regras) values ('{textoRegras}')")
+        comandos.execute(f"INSERT INTO {table} (trofeu) values ('{textoTrofeu}')")
+        conexao.commit()  # Confirma a transação no banco de dados
+        conexao.close()  # Fecha a conexão com o banco de dados
+
+    def lerBanco(self, banco, ip, usuario, senha):
+        conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco)
+
+        comandos = conexao.cursor()
+        query = "SELECT * from detetive"
+        query = "SELECT * from alianca"
+        query = "SELECT * from competicao"
+        query = "SELECT * from estrategia"
+        query = "SELECT * from peca"
+        query = "SELECT * from ranking"
+        query = "SELECT * from regras"
+        query = "SELECT * from trofeu"
+        comandos.execute(query)
+
+        for linha in comandos:
+            print(linha)
 
 
 detetive1 = Detetive()
@@ -414,3 +492,22 @@ print("Vencedor 3")
 print(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}")
 print(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}")
 print(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n")
+
+arq = Arquivo()
+arq.escreverDetetive()
+arq.escreverAlianca()
+arq.escreverPeca()
+arq.escreverEstrategia()
+arq.escreverRegra()
+arq.escreverCompeticao()
+arq.escreverRanking()
+arq.escreverTrofeu()
+arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
+arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
+arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
+arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
+arq.escreverBanco("Classes", "localhost", "root", "", "peca")
+arq.escreverBanco("Classes", "localhost", "root", "", "ranking")
+arq.escreverBanco("Classes", "localhost", "root", "", "regras")
+arq.escreverBanco("Classes", "localhost", "root", "", "trofeu")
+arq.lerBanco("Classes", "localhost", "root", "")
