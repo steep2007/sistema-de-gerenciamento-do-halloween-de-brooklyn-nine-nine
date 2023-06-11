@@ -138,59 +138,47 @@ class Arquivo:
 
     def escreverRegra(self, textoRegras):
         with open(self.regras, "w") as regras:
-            regras.write("Regras 1\n")
-            regras.write("Restrições Locais: {}\n".format(regras1.getRestricoesLocal()))
-            regras.write("Duração: {}\n\n".format(regras1.getDuracao()))
+            regras.write(regras1.getRestricoesLocal())
+            regras.write(regras1.getDuracao())
 
-            regras.write("Regras 2\n")
-            regras.write("Restrições Locais: {}\n".format(regras2.getRestricoesLocal()))
-            regras.write("Duração: {}\n\n".format(regras2.getDuracao()))
+            regras.write(regras2.getRestricoesLocal())
+            regras.write(regras2.getDuracao())
 
-            regras.write("Regras 3\n")
-            regras.write("Restrições Locais: {}\n".format(regras3.getRestricoesLocal()))
-            regras.write("Duração: {}\n\n".format(regras3.getDuracao()))
+            regras.write(regras3.getRestricoesLocal())
+            regras.write(regras3.getDuracao())
 
     def escreverCompeticao(self, textoCompeticao):
         with open(self.competicao, "w") as competicao:
-            competicao.write("Competição 1\n")
-            competicao.write(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}\n")
-            competicao.write(f"Data da Competição: {competicao1.getDataCompeticao()}\n \n")
+            competicao.write(competicao1.getListaParticipantes()[0].getNome(), competicao1.getListaParticipantes()[1].getNome(), competicao1.getListaParticipantes()[2].getNome(), competicao1.getListaParticipantes()[3].getNome())
+            competicao.write(competicao1.getDataCompeticao())
 
-            competicao.write("Competição 2\n")
-            competicao.write(f"Participantes: {competicao2.getListaParticipantes()[0].getNome()}, {competicao2.getListaParticipantes()[1].getNome()}, {competicao2.getListaParticipantes()[2].getNome()}, {competicao2.getListaParticipantes()[3].getNome()}, {competicao2.getListaParticipantes()[4].getNome()}, {competicao2.getListaParticipantes()[5].getNome()}\n")
-            competicao.write(f"Data da Competição: {competicao2.getDataCompeticao()}\n \n")
+            competicao.write(competicao2.getListaParticipantes()[0].getNome(), competicao2.getListaParticipantes()[1].getNome(), competicao2.getListaParticipantes()[2].getNome(), competicao2.getListaParticipantes()[3].getNome(), competicao2.getListaParticipantes()[4].getNome(), competicao2.getListaParticipantes()[5].getNome())
+            competicao.write(competicao2.getDataCompeticao())
 
-            competicao.write("Competição 3\n")
-            competicao.write(f"Participantes: {competicao3.getListaParticipantes()[0].getNome()}, {competicao3.getListaParticipantes()[1].getNome()}, {competicao3.getListaParticipantes()[2].getNome()}, {competicao3.getListaParticipantes()[3].getNome()}, {competicao3.getListaParticipantes()[4].getNome()}, {competicao3.getListaParticipantes()[5].getNome()}\n")
-            competicao.write(f"Data da Competição: {competicao3.getDataCompeticao()}\n \n")
+            competicao.write(competicao3.getListaParticipantes()[0].getNome(), competicao3.getListaParticipantes()[1].getNome(), competicao3.getListaParticipantes()[2].getNome(), competicao3.getListaParticipantes()[3].getNome(), competicao3.getListaParticipantes()[4].getNome(), competicao3.getListaParticipantes()[5].getNome())
+            competicao.write(competicao3.getDataCompeticao())
 
     def escreverRanking(self, textoRanking):
         with open(self.ranking, "w") as ranking:
-            ranking.write("Ranking 1 \n")
-            ranking.write(f"Detetives e Pontuações: \n{ranking1.getListaDetetives()[0].getNome()} - {ranking1.getPontuacoes()[0]}\n{ranking1.getListaDetetives()[1].getNome()} - {ranking1.getPontuacoes()[1]}\n{ranking1.getListaDetetives()[2].getNome()} - {ranking1.getPontuacoes()[2]}\n\n")
+            ranking.write(ranking1.getListaDetetives()[0].getNome(), ranking1.getPontuacoes()[0], ranking1.getListaDetetives()[1].getNome(), ranking1.getPontuacoes()[1], ranking1.getListaDetetives()[2].getNome(), ranking1.getPontuacoes()[2])
 
-            ranking.write("Ranking 2 \n")
-            ranking.write(f"Detetives e Pontuações: \n{ranking2.getListaDetetives()[0].getNome()} - {ranking2.getPontuacoes()[0]}\n{ranking2.getListaDetetives()[1].getNome()} - {ranking2.getPontuacoes()[1]}\n{ranking2.getListaDetetives()[2].getNome()} - {ranking2.getPontuacoes()[2]}\n\n")
+            ranking.write(ranking2.getListaDetetives()[0].getNome(), ranking2.getPontuacoes()[0], ranking2.getListaDetetives()[1].getNome(), ranking2.getPontuacoes()[1], ranking2.getListaDetetives()[2].getNome(), ranking2.getPontuacoes()[2])
 
-            ranking.write("Ranking 3 \n")
-            ranking.write(f"Detetives e Pontuações: \n{ranking3.getListaDetetives()[0].getNome()} - {ranking3.getPontuacoes()[0]}\n{ranking3.getListaDetetives()[1].getNome()} - {ranking3.getPontuacoes()[1]}\n{ranking3.getListaDetetives()[2].getNome()} - {ranking3.getPontuacoes()[2]}\n\n")
+            ranking.write(ranking3.getListaDetetives()[0].getNome(), ranking3.getPontuacoes()[0], ranking3.getListaDetetives()[1].getNome(), ranking3.getPontuacoes()[1], ranking3.getListaDetetives()[2].getNome(), ranking3.getPontuacoes()[2])
 
     def escreverTrofeu(self, textoTrofeu):
         with open(self.trofeu, "w") as trofeu:
-            trofeu.write("Vencedor 1\n")
-            trofeu.write(f"Detetive Vencedor: {trofeu1.getDetetiveVencedor().getNome()}\n")
-            trofeu.write(f"Ano da Vitória: {trofeu1.getAnoVitoria().getDataCompeticao()}\n")
-            trofeu.write(f"Frase da Vitória: {trofeu1.getFraseVitoria()}\n \n")
+            trofeu.write(trofeu1.getDetetiveVencedor().getNome())
+            trofeu.write(trofeu1.getAnoVitoria().getDataCompeticao())
+            trofeu.write(trofeu1.getFraseVitoria())
 
-            trofeu.write("Vencedor 2\n")
-            trofeu.write(f"Detetive Vencedor: {trofeu2.getDetetiveVencedor().getNome()}\n")
-            trofeu.write(f"Ano da Vitória: {trofeu2.getAnoVitoria().getDataCompeticao()}\n")
-            trofeu.write(f"Frase da Vitória: {trofeu2.getFraseVitoria()}\n \n")
+            trofeu.write(trofeu2.getDetetiveVencedor().getNome())
+            trofeu.write(trofeu2.getAnoVitoria().getDataCompeticao())
+            trofeu.write(trofeu2.getFraseVitoria())
 
-            trofeu.write("Vencedor 3\n")
-            trofeu.write(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}\n")
-            trofeu.write(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}\n")
-            trofeu.write(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n \n")
+            trofeu.write(trofeu3.getDetetiveVencedor().getNome())
+            trofeu.write(trofeu3.getAnoVitoria().getDataCompeticao())
+            trofeu.write(trofeu3.getFraseVitoria())
 
     def escreverBanco(self, banco, ip, usuario, senha, table):
         conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco)  # Estabelece a conexão com o banco de dados
