@@ -12,46 +12,46 @@ from classes.trofeu import Trofeu
 import mysql.connector
 
 class Arquivo:
-    # def __init__(self, detetive, alianca, competicao, estrategia, peca, ranking, regras, trofeu):
-    #     self.detetive = detetive  # Armazena o nome do arquivo como atributo do objeto
-    #     self.alianca = alianca
-    #     self.competicao = competicao
-    #     self.estrategia = estrategia
-    #     self.peca = peca
-    #     self.ranking = ranking
-    #     self.regras = regras
-    #     self.trofeu = trofeu
+    def __init__(self, detetive, alianca, competicao, estrategia, peca, ranking, regras, trofeu):
+        self.detetive = detetive  # Armazena o nome do arquivo como atributo do objeto
+        self.alianca = alianca
+        self.competicao = competicao
+        self.estrategia = estrategia
+        self.peca = peca
+        self.ranking = ranking
+        self.regras = regras
+        self.trofeu = trofeu
 
     def lerDetetive(self):
-        with open("detetive.txt", "r") as detetive:
+        with open(self.detetive, "r") as detetive:
             return detetive.read()
 
     def lerAlianca(self):
-        with open("alianca.txt", "r") as alianca:
+        with open(self.alianca, "r") as alianca:
             return alianca.read()
 
     def lerCompeticao(self):
-        with open("competicao.txt", "r") as competicao:
+        with open(self.competicao, "r") as competicao:
             return competicao.read()
 
     def lerEstrategia(self):
-        with open("estrategia.txt", "r") as estrategia:
+        with open(self.estrategia, "r") as estrategia:
             return estrategia.read()
 
     def lerPeca(self):
-        with open("peca.txt", "r") as peca:
+        with open(self.peca, "r") as peca:
             return peca.read()
 
     def lerRanking(self):
-        with open("ranking.txt", "r") as ranking:
+        with open(self.ranking, "r") as ranking:
             return ranking.read()
 
     def lerRegras(self):
-        with open("regras.txt", "r") as regras:
+        with open(self.regras, "r") as regras:
             return regras.read()
 
     def lerTrofeu(self):
-        with open("trofeu.txt", "r") as trofeu:
+        with open(self.trofeu, "r") as trofeu:
             return trofeu.read()
 
     def escreverDetetive(self):
