@@ -129,13 +129,33 @@ class Arquivo:
         with open('peca.txt', "r") as peca:
             return peca.read()
 
-    def lerRanking(self):
-        with open('ranking.txt', "r") as ranking:
-            return ranking.read()
-
     def lerRegras(self):
         with open('regras.txt', "r") as regras:
             return regras.read()
+
+    def lerRanking1(self):
+        with open('arquivos txt/ranking1_detetives.txt', "r") as ranking:
+            return ranking.read()
+
+    def lerRanking2(self):
+        with open('arquivos txt/ranking1_pontos.txt', "r") as ranking:
+            return ranking.read()
+
+    def lerRanking3(self):
+        with open('arquivos txt/ranking2_detetives.txt', "r") as ranking:
+            return ranking.read()
+
+    def lerRanking4(self):
+        with open('arquivos txt/ranking2_pontos.txt', "r") as ranking:
+            return ranking.read()
+
+    def lerRanking5(self):
+        with open('arquivos txt/ranking3_detetives.txt', "r") as ranking:
+            return ranking.read()
+
+    def lerRanking6(self):
+        with open('arquivos txt/ranking3_pontos.txt', "r") as ranking:
+            return ranking.read()
 
     def lerTrofeu1(self):
         with open('arquivos txt/trofeu1_detetive_vencedor.txt', "r") as trofeu:
@@ -314,22 +334,36 @@ class Arquivo:
 
     def escreverCompeticao(self, textoCompeticao):
         with open(self.competicao, "w") as competicao:
-            competicao.write(competicao1.getListaParticipantes()[0].getNome(), competicao1.getListaParticipantes()[1].getNome(), competicao1.getListaParticipantes()[2].getNome(), competicao1.getListaParticipantes()[3].getNome())
+            competicao.write(competicao1.getListaParticipantes()[0].getNome() + ',' + competicao1.getListaParticipantes()[1].getNome() + ',' + competicao1.getListaParticipantes()[2].getNome() + ',' + competicao1.getListaParticipantes()[3].getNome())
             competicao.write(competicao1.getDataCompeticao())
 
-            competicao.write(competicao2.getListaParticipantes()[0].getNome(), competicao2.getListaParticipantes()[1].getNome(), competicao2.getListaParticipantes()[2].getNome(), competicao2.getListaParticipantes()[3].getNome(), competicao2.getListaParticipantes()[4].getNome(), competicao2.getListaParticipantes()[5].getNome())
+            competicao.write(competicao2.getListaParticipantes()[0].getNome() + ',' + competicao2.getListaParticipantes()[1].getNome() + ',' + competicao2.getListaParticipantes()[2].getNome() + ',' + competicao2.getListaParticipantes()[3].getNome() + ',' + competicao2.getListaParticipantes()[4].getNome() + ',' + competicao2.getListaParticipantes()[5].getNome())
             competicao.write(competicao2.getDataCompeticao())
 
-            competicao.write(competicao3.getListaParticipantes()[0].getNome(), competicao3.getListaParticipantes()[1].getNome(), competicao3.getListaParticipantes()[2].getNome(), competicao3.getListaParticipantes()[3].getNome(), competicao3.getListaParticipantes()[4].getNome(), competicao3.getListaParticipantes()[5].getNome())
+            competicao.write(competicao3.getListaParticipantes()[0].getNome() + ',' + competicao3.getListaParticipantes()[1].getNome() + ',' + competicao3.getListaParticipantes()[2].getNome() + ',' + competicao3.getListaParticipantes()[3].getNome() + ',' + competicao3.getListaParticipantes()[4].getNome() + ',' + competicao3.getListaParticipantes()[5].getNome())
             competicao.write(competicao3.getDataCompeticao())
 
-    def escreverRanking(self, textoRanking):
-        with open(self.ranking, "w") as ranking:
-            ranking.write(ranking1.getListaDetetives()[0].getNome(), ranking1.getPontuacoes()[0], ranking1.getListaDetetives()[1].getNome(), ranking1.getPontuacoes()[1], ranking1.getListaDetetives()[2].getNome(), ranking1.getPontuacoes()[2])
+    def escreverDetetiveRanking1(self):
+        with open('arquivos txt/ranking1_detetives.txt', "w") as ranking:
+            ranking.write('1 - ' + ranking1.getListaDetetives()[0].getNome()  + ' 2 - ' + ranking1.getListaDetetives()[1].getNome() + ' 3 - ' + ranking1.getListaDetetives()[2].getNome())
+    def escreverPontosRanking1(self):
+        with open('arquivos txt/ranking1_pontos.txt', "w") as ranking:
+           ranking.write('1 - ' + str(ranking1.getPontuacoes()[0]) + ' 2 - ' + str(ranking1.getPontuacoes()[1]) + ' 3 - ' + str(ranking1.getPontuacoes()[2]))
 
-            ranking.write(ranking2.getListaDetetives()[0].getNome(), ranking2.getPontuacoes()[0], ranking2.getListaDetetives()[1].getNome(), ranking2.getPontuacoes()[1], ranking2.getListaDetetives()[2].getNome(), ranking2.getPontuacoes()[2])
+    def escreverDetetiveRanking2(self):
+        with open('arquivos txt/ranking2_detetives.txt', "w") as ranking:
+            ranking.write('1 - ' + ranking2.getListaDetetives()[0].getNome() + ' 2 - ' + ranking2.getListaDetetives()[1].getNome() + ' 3 - ' + ranking2.getListaDetetives()[2].getNome())
 
-            ranking.write(ranking3.getListaDetetives()[0].getNome(), ranking3.getPontuacoes()[0], ranking3.getListaDetetives()[1].getNome(), ranking3.getPontuacoes()[1], ranking3.getListaDetetives()[2].getNome(), ranking3.getPontuacoes()[2])
+    def escreverPontosRanking2(self):
+        with open('arquivos txt/ranking2_pontos.txt', "w") as ranking:
+            ranking.write('1 - ' + str(ranking2.getPontuacoes()[0]) + ' 2 - ' + str(ranking2.getPontuacoes()[1]) + ' 3 - ' + str(ranking2.getPontuacoes()[2]))
+    def escreverDetetiveRanking3(self):
+        with open('arquivos txt/ranking3_detetives.txt', "w") as ranking:
+            ranking.write('1 - ' + ranking3.getListaDetetives()[0].getNome() + ' 2 - ' + ranking3.getListaDetetives()[1].getNome() + ' 3 - ' + ranking3.getListaDetetives()[2].getNome())
+
+    def escreverPontosRanking3(self):
+        with open('arquivos txt/ranking3_pontos.txt', "w") as ranking:
+            ranking.write( '1 - ' + str(ranking3.getPontuacoes()[0]) + ' 2 - ' + str(ranking3.getPontuacoes()[1]) + ' 3 - ' + str(ranking3.getPontuacoes()[2]))
 
     def escreverDetetiveVencedorTrofeu1(self):
         with open('arquivos txt/trofeu1_detetive_vencedor.txt', "w") as trofeu:
@@ -401,29 +435,37 @@ class Arquivo:
         textoAlianca2 = self.lerAlianca2()
         textoAlianca3 = self.lerAlianca3()
 
-        textoPeca1 = self.lerPeca1()
-        textoPeca2 = self.lerPeca2()
-        textoPeca3 = self.lerPeca3()
-        textoPeca4 = self.lerPeca4()
-        textoPeca5 = self.lerPeca5()
-        textoPeca6 = self.lerPeca6()
-        textoPeca7 = self.lerPeca7()
-        textoPeca8 = self.lerPeca8()
+        # textoPeca1 = self.lerPeca1()
+        # textoPeca2 = self.lerPeca2()
+        # textoPeca3 = self.lerPeca3()
+        # textoPeca4 = self.lerPeca4()
+        # textoPeca5 = self.lerPeca5()
+        # textoPeca6 = self.lerPeca6()
+        # textoPeca7 = self.lerPeca7()
+        # textoPeca8 = self.lerPeca8()
 
-        textoEstrategia1 = self.lerEstrategia1()
-        textoEstrategia2 = self.lerEstrategia2()
-        textoEstrategia3 = self.lerEstrategia3()
-        textoEstrategia4 = self.lerEstrategia4()
-        textoEstrategia5 = self.lerEstrategia5()
-        textoEstrategia6 = self.lerEstrategia6()
-        textoEstrategia7 = self.lerEstrategia7()
-        textoEstrategia8 = self.lerEstrategia8()
+        # textoEstrategia1 = self.lerEstrategia1()
+        # textoEstrategia2 = self.lerEstrategia2()
+        # textoEstrategia3 = self.lerEstrategia3()
+        # textoEstrategia4 = self.lerEstrategia4()
+        # textoEstrategia5 = self.lerEstrategia5()
+        # textoEstrategia6 = self.lerEstrategia6()
+        # textoEstrategia7 = self.lerEstrategia7()
+        # textoEstrategia8 = self.lerEstrategia8()
 
         textoCompeticao = self.lerCompeticao()
         textoEstrategia = self.lerEstrategia()
         textoPeca = self.lerPeca()
-        textoRanking = self.lerRanking()
         textoRegras = self.lerRegras()
+
+        textoRanking1 = self.lerRanking1()
+        textoRanking2 = self.lerRanking2()
+
+        textoRanking3 = self.lerRanking3()
+        textoRanking4 = self.lerRanking4()
+
+        textoRanking5 = self.lerRanking5()
+        textoRanking6 = self.lerRanking6()
 
         textoTrofeu1 = self.lerTrofeu1()
         textoTrofeu2 = self.lerTrofeu2()
@@ -448,24 +490,22 @@ class Arquivo:
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca1}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca2}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca3}')")
-        #comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu1}', '{textoTrofeu2}', '{textoTrofeu3}')")
-        comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu4}', '{textoTrofeu5}', '{textoTrofeu6}')")
-        comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu7}', '{textoTrofeu8}', '{textoTrofeu9}')")
-
-
-        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca1}')")
-        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca2}')")
-        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca3}')")
 
         # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca1}', '{textoPeca2}')")
         # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca3}', '{textoPeca4}')")
         # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca5}', '{textoPeca6}')")
         # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca7}', '{textoPeca8}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia1}', '{textoEstrategia2}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia3}', '{textoEstrategia4}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia5}', '{textoEstrategia6}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia7}', '{textoEstrategia8}')")
 
-        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia1}', {textoEstrategia2}')")
-        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia3}', {textoEstrategia4}')")
-        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia5}', {textoEstrategia6}')")
-        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia7}', {textoEstrategia8}')")
+        # comandos.execute(f"INSERT INTO {table} (listaDetetives, pontuacoes) VALUES ('{textoRanking1}', '{textoRanking2}')")
+        # comandos.execute(f"INSERT INTO {table} (listaDetetives, pontuacoes) VALUES ('{textoRanking3}', '{textoRanking4}')")
+        # comandos.execute(f"INSERT INTO {table} (listaDetetives, pontuacoes) VALUES ('{textoRanking5}', '{textoRanking6}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu1}', '{textoTrofeu2}', '{textoTrofeu3}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu4}', '{textoTrofeu5}', '{textoTrofeu6}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu7}', '{textoTrofeu8}', '{textoTrofeu9}')")
 
         conexao.commit()
         conexao.close()
@@ -476,12 +516,13 @@ class Arquivo:
         comandos = conexao.cursor()
         query = "SELECT * from detetive"
         query = "SELECT * from alianca"
+        query = "SELECT * from trofeu"
+
         # query = "SELECT * from competicao"
         # query = "SELECT * from estrategia"
         # query = "SELECT * from peca"
-        # query = "SELECT * from ranking"
         # query = "SELECT * from regras"
-        query = "SELECT * from trofeu"
+        query = "SELECT * from ranking"
         comandos.execute(query)
 
         for linha in comandos:
@@ -787,8 +828,15 @@ arq.escreverAlianca3()
 # arq.escreverEstrategia("estrategia.txt")
 # arq.escreverRegra("regras.txt")
 # arq.escreverCompeticao("competicao.txt")
-# arq.escreverRanking("ranking.txt")
-# arq.escreverTrofeu("trofeu.txt")
+
+arq.escreverDetetiveRanking1()
+arq.escreverPontosRanking1()
+
+arq.escreverDetetiveRanking2()
+arq.escreverPontosRanking2()
+
+arq.escreverDetetiveRanking3()
+arq.escreverPontosRanking3()
 
 arq.escreverDetetiveVencedorTrofeu1()
 arq.escreverAnoVitoriaTrofeu1()
@@ -807,11 +855,12 @@ arq.escreverFraseVitoriaTrofeu3()
 # # arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "peca")
-# # arq.escreverBanco("Classes", "localhost", "root", "", "ranking")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "regras")
+#arq.escreverBanco("Classes", "localhost", "root", "", "ranking")
 #arq.escreverBanco("Classes", "localhost", "root", "", "trofeu")
 #arq.lerBanco("Classes", "localhost", "root", "", "detetive")
 #arq.lerBanco("Classes", "localhost", "root", "", "alianca")
+#arq.lerBanco("Classes", "localhost", "root", "", "ranking")
 #arq.lerBanco("Classes", "localhost", "root", "", "trofeu")
 
 
