@@ -117,8 +117,28 @@ class Arquivo:
         with open('arquivos txt/alianca3.txt', "r") as alianca:
             return alianca.read()
 
-    def lerCompeticao(self):
-        with open('competicao.txt', "r") as competicao:
+    def lerCompeticao1(self):
+        with open('arquivos txt/competicao1_lista_participantes.txt', "r") as competicao:
+            return competicao.read()
+
+    def lerCompeticao2(self):
+        with open('arquivos txt/competicao1_data_competicao.txt', "r") as competicao:
+            return competicao.read()
+
+    def lerCompeticao3(self):
+        with open('arquivos txt/competicao2_lista_participantes.txt', "r") as competicao:
+            return competicao.read()
+
+    def lerCompeticao4(self):
+        with open('arquivos txt/competicao2_data_competicao.txt', "r") as competicao:
+            return competicao.read()
+
+    def lerCompeticao5(self):
+        with open('arquivos txt/competicao3_lista_participantes.txt', "r") as competicao:
+            return competicao.read()
+
+    def lerCompeticao6(self):
+        with open('arquivos txt/competicao3_data_competicao.txt', "r") as competicao:
             return competicao.read()
 
     def lerEstrategia1(self):
@@ -426,15 +446,25 @@ class Arquivo:
         with open('arquivos txt/estrategia4_lista_acoes.txt', "w") as estrategia:
             estrategia.write(estrategia4.getListaAcoes())
 
-    def escreverCompeticao(self):
-        with open(self.competicao, "w") as competicao:
+    def escreverCompeticaoParticipantes1(self):
+        with open('arquivos txt/competicao1_lista_participantes.txt', "w") as competicao:
             competicao.write(competicao1.getListaParticipantes()[0].getNome() + ',' + competicao1.getListaParticipantes()[1].getNome() + ',' + competicao1.getListaParticipantes()[2].getNome() + ',' + competicao1.getListaParticipantes()[3].getNome())
+    def escreverCompeticaoDataCompeticao1(self):
+        with open('arquivos txt/competicao1_data_competicao.txt', "w") as competicao:
             competicao.write(competicao1.getDataCompeticao())
 
+    def escreverCompeticaoParticipantes2(self):
+        with open('arquivos txt/competicao2_lista_participantes.txt', "w") as competicao:
             competicao.write(competicao2.getListaParticipantes()[0].getNome() + ',' + competicao2.getListaParticipantes()[1].getNome() + ',' + competicao2.getListaParticipantes()[2].getNome() + ',' + competicao2.getListaParticipantes()[3].getNome() + ',' + competicao2.getListaParticipantes()[4].getNome() + ',' + competicao2.getListaParticipantes()[5].getNome())
+    def escreverCompeticaoDataCompeticao2(self):
+        with open('arquivos txt/competicao2_data_competicao.txt', "w") as competicao:
             competicao.write(competicao2.getDataCompeticao())
 
+    def escreverCompeticaoParticipantes3(self):
+        with open('arquivos txt/competicao3_lista_participantes.txt', "w") as competicao:
             competicao.write(competicao3.getListaParticipantes()[0].getNome() + ',' + competicao3.getListaParticipantes()[1].getNome() + ',' + competicao3.getListaParticipantes()[2].getNome() + ',' + competicao3.getListaParticipantes()[3].getNome() + ',' + competicao3.getListaParticipantes()[4].getNome() + ',' + competicao3.getListaParticipantes()[5].getNome())
+    def escreverCompeticaoDataCompeticao3(self):
+        with open('arquivos txt/competicao3_data_competicao.txt', "w") as competicao:
             competicao.write(competicao3.getDataCompeticao())
 
     def escreverRegrasRestricoes1(self):
@@ -571,7 +601,12 @@ class Arquivo:
         textoEstrategia7 = self.lerEstrategia7()
         textoEstrategia8 = self.lerEstrategia8()
 
-        textoCompeticao = self.lerCompeticao()
+        textoCompeticao1 = self.lerCompeticao1()
+        textoCompeticao2 = self.lerCompeticao2()
+        textoCompeticao3 = self.lerCompeticao3()
+        textoCompeticao4 = self.lerCompeticao4()
+        textoCompeticao5 = self.lerCompeticao5()
+        textoCompeticao6 = self.lerCompeticao6()
 
         textoRegras1 = self.lerRegras1()
         textoRegras2 = self.lerRegras2()
@@ -621,6 +656,9 @@ class Arquivo:
         # comandos.execute(f"INSERT INTO {table} (detetive_id, listaAcoes) VALUES ('{textoEstrategia5}', '{textoEstrategia6}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id, listaAcoes) VALUES ('{textoEstrategia7}', '{textoEstrategia8}')")
 
+        comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao1}', '{textoCompeticao2}')")
+        comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao3}', '{textoCompeticao4}')")
+        comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao5}', '{textoCompeticao6}')")
 
         # comandos.execute(f"INSERT INTO {table} (restricoesLocal, duracao) VALUES ('{textoRegras1}', '{textoRegras2}')")
         # comandos.execute(f"INSERT INTO {table} (restricoesLocal, duracao) VALUES ('{textoRegras3}', '{textoRegras4}')")
@@ -972,7 +1010,14 @@ arq.escreverEstrategiaListaAcoes3()
 arq.escreverEstrategiaDetetive4()
 arq.escreverEstrategiaListaAcoes4()
 
-# arq.escreverCompeticao()
+arq.escreverCompeticaoParticipantes1()
+arq.escreverCompeticaoDataCompeticao1()
+
+arq.escreverCompeticaoParticipantes2()
+arq.escreverCompeticaoDataCompeticao2()
+
+arq.escreverCompeticaoParticipantes3()
+arq.escreverCompeticaoDataCompeticao3()
 
 arq.escreverRegrasRestricoes1()
 arq.escreverRegrasDuracao1()
@@ -1021,5 +1066,3 @@ arq.lerBanco("Classes", "localhost", "root", "", "competicao")
 #arq.lerBanco("Classes", "localhost", "root", "", "regras")
 #arq.lerBanco("Classes", "localhost", "root", "", "ranking")
 #arq.lerBanco("Classes", "localhost", "root", "", "trofeu")
-
-
