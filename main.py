@@ -137,8 +137,34 @@ class Arquivo:
         with open('regras.txt', "r") as regras:
             return regras.read()
 
-    def lerTrofeu(self):
-        with open('trofeu.txt', "r") as trofeu:
+    def lerTrofeu1(self):
+        with open('arquivos txt/trofeu1_detetive_vencedor.txt', "r") as trofeu:
+            return trofeu.read()
+    def lerTrofeu2(self):
+        with open('arquivos txt/trofeu1_ano_vitoria.txt', "r") as trofeu:
+            return trofeu.read()
+    def lerTrofeu3(self):
+        with open('arquivos txt/trofeu1_frase_vitoria.txt', "r") as trofeu:
+            return trofeu.read()
+
+    def lerTrofeu4(self):
+        with open('arquivos txt/trofeu2_detetive_vencedor.txt', "r") as trofeu:
+            return trofeu.read()
+    def lerTrofeu5(self):
+        with open('arquivos txt/trofeu2_ano_vitoria.txt', "r") as trofeu:
+            return trofeu.read()
+    def lerTrofeu6(self):
+        with open('arquivos txt/trofeu2_frase_vitoria.txt', "r") as trofeu:
+            return trofeu.read()
+
+    def lerTrofeu7(self):
+        with open('arquivos txt/trofeu3_detetive_vencedor.txt', "r") as trofeu:
+            return trofeu.read()
+    def lerTrofeu8(self):
+        with open('arquivos txt/trofeu3_ano_vitoria.txt', "r") as trofeu:
+            return trofeu.read()
+    def lerTrofeu9(self):
+        with open('arquivos txt/trofeu3_frase_vitoria.txt', "r") as trofeu:
             return trofeu.read()
 
     def escreverDetetiveN(self):
@@ -305,18 +331,37 @@ class Arquivo:
 
             ranking.write(ranking3.getListaDetetives()[0].getNome(), ranking3.getPontuacoes()[0], ranking3.getListaDetetives()[1].getNome(), ranking3.getPontuacoes()[1], ranking3.getListaDetetives()[2].getNome(), ranking3.getPontuacoes()[2])
 
-    def escreverTrofeu(self, textoTrofeu):
-        with open(self.trofeu, "w") as trofeu:
+    def escreverDetetiveVencedorTrofeu1(self):
+        with open('arquivos txt/trofeu1_detetive_vencedor.txt', "w") as trofeu:
             trofeu.write(trofeu1.getDetetiveVencedor().getNome())
+    def escreverAnoVitoriaTrofeu1(self):
+        with open('arquivos txt/trofeu1_ano_vitoria.txt', "w") as trofeu:
             trofeu.write(trofeu1.getAnoVitoria().getDataCompeticao())
+
+    def escreverFraseVitoriaTrofeu1(self):
+        with open('arquivos txt/trofeu1_frase_vitoria.txt', "w") as trofeu:
             trofeu.write(trofeu1.getFraseVitoria())
 
+    def escreverDetetiveVencedorTrofeu2(self):
+        with open('arquivos txt/trofeu2_detetive_vencedor.txt', "w") as trofeu:
             trofeu.write(trofeu2.getDetetiveVencedor().getNome())
+    def escreverAnoVitoriaTrofeu2(self):
+        with open('arquivos txt/trofeu2_ano_vitoria.txt', "w") as trofeu:
             trofeu.write(trofeu2.getAnoVitoria().getDataCompeticao())
+
+    def escreverFraseVitoriaTrofeu2(self):
+        with open('arquivos txt/trofeu2_frase_vitoria.txt', "w") as trofeu:
             trofeu.write(trofeu2.getFraseVitoria())
 
+    def escreverDetetiveVencedorTrofeu3(self):
+        with open('arquivos txt/trofeu3_detetive_vencedor.txt', "w") as trofeu:
             trofeu.write(trofeu3.getDetetiveVencedor().getNome())
+    def escreverAnoVitoriaTrofeu3(self):
+        with open('arquivos txt/trofeu3_ano_vitoria.txt', "w") as trofeu:
             trofeu.write(trofeu3.getAnoVitoria().getDataCompeticao())
+
+    def escreverFraseVitoriaTrofeu3(self):
+        with open('arquivos txt/trofeu3_frase_vitoria.txt', "w") as trofeu:
             trofeu.write(trofeu3.getFraseVitoria())
 
     def escreverBanco(self, banco, ip, usuario, senha, table):
@@ -356,13 +401,25 @@ class Arquivo:
         textoAlianca2 = self.lerAlianca2()
         textoAlianca3 = self.lerAlianca3()
 
-
         textoCompeticao = self.lerCompeticao()
         textoEstrategia = self.lerEstrategia()
         textoPeca = self.lerPeca()
         textoRanking = self.lerRanking()
         textoRegras = self.lerRegras()
-        textoTrofeu = self.lerTrofeu()
+
+        textoTrofeu1 = self.lerTrofeu1()
+        textoTrofeu2 = self.lerTrofeu2()
+        textoTrofeu3 = self.lerTrofeu3()
+
+        textoTrofeu4 = self.lerTrofeu4()
+        textoTrofeu5 = self.lerTrofeu5()
+        textoTrofeu6 = self.lerTrofeu6()
+
+        textoTrofeu7 = self.lerTrofeu7()
+        textoTrofeu8 = self.lerTrofeu8()
+        textoTrofeu9 = self.lerTrofeu9()
+
+
         comandos = conexao.cursor()
         # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive}', '{textoDetetive2}', '{textoDetetive3}', '{textoDetetive4}')")
         # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive6}', '{textoDetetive8}', '{textoDetetive5}', '{textoDetetive7}')")
@@ -370,9 +427,13 @@ class Arquivo:
         # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive13}', '{textoDetetive14}', '{textoDetetive15}', '{textoDetetive16}')")
         # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive17}', '{textoDetetive18}', '{textoDetetive19}', '{textoDetetive20}')")
         # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive21}', '{textoDetetive22}', '{textoDetetive23}', '{textoDetetive24}')")
-        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca1}')")
-        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca2}')")
-        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca3}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca1}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca2}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca3}')")
+        #comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu1}', '{textoTrofeu2}', '{textoTrofeu3}')")
+        comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu4}', '{textoTrofeu5}', '{textoTrofeu6}')")
+        comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu7}', '{textoTrofeu8}', '{textoTrofeu9}')")
+
 
         conexao.commit()
         conexao.close()
@@ -388,7 +449,7 @@ class Arquivo:
         # query = "SELECT * from peca"
         # query = "SELECT * from ranking"
         # query = "SELECT * from regras"
-        # query = "SELECT * from trofeu"
+        query = "SELECT * from trofeu"
         comandos.execute(query)
 
         for linha in comandos:
@@ -696,14 +757,29 @@ arq.escreverAlianca3()
 # arq.escreverCompeticao("competicao.txt")
 # arq.escreverRanking("ranking.txt")
 # arq.escreverTrofeu("trofeu.txt")
+
+arq.escreverDetetiveVencedorTrofeu1()
+arq.escreverAnoVitoriaTrofeu1()
+arq.escreverFraseVitoriaTrofeu1()
+
+arq.escreverDetetiveVencedorTrofeu2()
+arq.escreverAnoVitoriaTrofeu2()
+arq.escreverFraseVitoriaTrofeu2()
+
+arq.escreverDetetiveVencedorTrofeu3()
+arq.escreverAnoVitoriaTrofeu3()
+arq.escreverFraseVitoriaTrofeu3()
+
 #arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
-arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
+#arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "peca")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "ranking")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "regras")
-# # arq.escreverBanco("Classes", "localhost", "root", "", "trofeu")
+#arq.escreverBanco("Classes", "localhost", "root", "", "trofeu")
 #arq.lerBanco("Classes", "localhost", "root", "", "detetive")
-arq.lerBanco("Classes", "localhost", "root", "", "alianca")
+#arq.lerBanco("Classes", "localhost", "root", "", "alianca")
+#arq.lerBanco("Classes", "localhost", "root", "", "trofeu")
+
 
