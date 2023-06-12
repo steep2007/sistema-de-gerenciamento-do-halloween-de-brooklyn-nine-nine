@@ -10,71 +10,111 @@ from classes.trofeu import Trofeu
 import mysql.connector
 class Arquivo:
     def lerDetetive1(self):
-        with open('detetiveN.txt', "r") as detetive:
+        with open('arquivos txt/detetiveN.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive2(self):
-        with open('detetiveS.txt', "r") as detetive:
+        with open('arquivos txt/detetiveS.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive3(self):
-        with open('detetiveC.txt', "r") as detetive:
+        with open('arquivos txt/detetiveC.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive4(self):
-        with open('detetiveP.txt', "r") as detetive:
+        with open('arquivos txt/detetiveP.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive5(self):
-        with open('detetive2_cargo.txt', "r") as detetive:
+        with open('arquivos txt/detetive2_cargo.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive6(self):
-        with open('detetive2_nome.txt', "r") as detetive:
+        with open('arquivos txt/detetive2_nome.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive7(self):
-        with open('detetive2_participacao_anterior.txt', "r") as detetive:
+        with open('arquivos txt/detetive2_participacao_anterior.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive8(self):
-        with open('detetive2_sobrenome.txt', "r") as detetive:
+        with open('arquivos txt/detetive2_sobrenome.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive9(self):
-        with open('detetive3_nome.txt', "r") as detetive:
+        with open('arquivos txt/detetive3_nome.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive10(self):
-        with open('detetive3_sobrenome.txt', "r") as detetive:
+        with open('arquivos txt/detetive3_sobrenome.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive11(self):
-        with open('detetive3_cargo.txt', "r") as detetive:
+        with open('arquivos txt/detetive3_cargo.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive12(self):
-        with open('detetive3_participacao_anterior.txt', "r") as detetive:
+        with open('arquivos txt/detetive3_participacao_anterior.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive13(self):
-        with open('detetive4_nome.txt', "r") as detetive:
+        with open('arquivos txt/detetive4_nome.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive14(self):
-        with open('detetive4_sobrenome.txt', "r") as detetive:
+        with open('arquivos txt/detetive4_sobrenome.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive15(self):
-        with open('detetive4_cargo.txt', "r") as detetive:
+        with open('arquivos txt/detetive4_cargo.txt', "r") as detetive:
             return detetive.read()
 
     def lerDetetive16(self):
-        with open('detetive4_participacao_anterior.txt', "r") as detetive:
+        with open('arquivos txt/detetive4_participacao_anterior.txt', "r") as detetive:
             return detetive.read()
 
-    def lerAlianca(self):
-        with open('alianca.txt', "r") as alianca:
+    def lerDetetive17(self):
+        with open('arquivos txt/detetive5_nome.txt', "r") as detetive:
+            return detetive.read()
+
+    def lerDetetive18(self):
+        with open('arquivos txt/detetive5_sobrenome.txt', "r") as detetive:
+            return detetive.read()
+
+    def lerDetetive19(self):
+        with open('arquivos txt/detetive5_cargo.txt', "r") as detetive:
+            return detetive.read()
+
+    def lerDetetive20(self):
+        with open('arquivos txt/detetive5_participacao_anterior.txt', "r") as detetive:
+            return detetive.read()
+
+    def lerDetetive21(self):
+        with open('arquivos txt/detetive6_nome.txt', "r") as detetive:
+            return detetive.read()
+
+    def lerDetetive22(self):
+        with open('arquivos txt/detetive6_sobrenome.txt', "r") as detetive:
+            return detetive.read()
+
+    def lerDetetive23(self):
+        with open('arquivos txt/detetive6_cargo.txt', "r") as detetive:
+            return detetive.read()
+
+    def lerDetetive24(self):
+        with open('arquivos txt/detetive6_participacao_anterior.txt', "r") as detetive:
+            return detetive.read()
+
+    def lerAlianca1(self):
+        with open('arquivos txt/alianca1.txt', "r") as alianca:
+            return alianca.read()
+
+    def lerAlianca2(self):
+        with open('arquivos txt/alianca2.txt', "r") as alianca:
+            return alianca.read()
+
+    def lerAlianca3(self):
+        with open('arquivos txt/alianca3.txt', "r") as alianca:
             return alianca.read()
 
     def lerCompeticao(self):
@@ -102,106 +142,110 @@ class Arquivo:
             return trofeu.read()
 
     def escreverDetetiveN(self):
-        with open("detetiveN.txt", "w") as detetive:
+        with open("arquivos txt/detetiveN.txt", "w") as detetive:
             detetive.write(detetive1.getNome() + ' ')
 
     def escreverDetetiveS(self):
-        with open("detetiveS.txt", "w") as detetive:
+        with open("arquivos txt/detetiveS.txt", "w") as detetive:
             detetive.write(detetive1.getSobrenome() + ' ')
 
     def escreverDetetiveC(self):
-        with open("detetiveC.txt", "w") as detetive:
+        with open("arquivos txt/detetiveC.txt", "w") as detetive:
             detetive.write(detetive1.getCargo() + ' ')
     def escreverDetetiveP(self):
-        with open("detetiveP.txt", "w") as detetive:
+        with open("arquivos txt/detetiveP.txt", "w") as detetive:
             detetive.write(detetive1.getParticipacaoAnterior() + ' ')
 
     def escreverNomeDetetive2(self):
-        with open("detetive2_nome.txt", "w") as detetive:
+        with open("arquivos txt/detetive2_nome.txt", "w") as detetive:
             detetive.write(detetive2.getNome() + ' ')
 
     def escreverSobrenomeDetetive2(self):
-        with open("detetive2_sobrenome.txt", "w") as detetive:
+        with open("arquivos txt/detetive2_sobrenome.txt", "w") as detetive:
             detetive.write(detetive2.getSobrenome() + ' ')
 
     def escreverCargoDetetive2(self):
-        with open("detetive2_cargo.txt", "w") as detetive:
+        with open("arquivos txt/detetive2_cargo.txt", "w") as detetive:
             detetive.write(detetive2.getCargo() + ' ')
 
     def escreverParticipacaoAnteriorDetetive2(self):
-        with open("detetive2_participacao_anterior.txt", "w") as detetive:
+        with open("arquivos txt/detetive2_participacao_anterior.txt", "w") as detetive:
             detetive.write(detetive2.getParticipacaoAnterior() + ' ')
 
     def escreverNomeDetetive3(self):
-        with open("detetive3_nome.txt", "w") as detetive:
+        with open("arquivos txt/detetive3_nome.txt", "w") as detetive:
             detetive.write(detetive3.getNome() + ' ')
 
     def escreverSobrenomeDetetive3(self):
-        with open("detetive3_sobrenome.txt", "w") as detetive:
+        with open("arquivos txt/detetive3_sobrenome.txt", "w") as detetive:
             detetive.write(detetive3.getSobrenome() + ' ')
 
     def escreverCargoDetetive3(self):
-        with open("detetive3_cargo.txt", "w") as detetive:
+        with open("arquivos txt/detetive3_cargo.txt", "w") as detetive:
             detetive.write(detetive3.getCargo() + ' ')
 
     def escreverParticipacaoAnteriorDetetive3(self):
-        with open("detetive3_participacao_anterior.txt", "w") as detetive:
+        with open("arquivos txt/detetive3_participacao_anterior.txt", "w") as detetive:
             detetive.write(detetive3.getParticipacaoAnterior() + ' ')
 
     def escreverNomeDetetive4(self):
-        with open("detetive4_nome.txt", "w") as detetive:
+        with open("arquivos txt/detetive4_nome.txt", "w") as detetive:
             detetive.write(detetive4.getNome() + ' ')
 
     def escreverSobrenomeDetetive4(self):
-        with open("detetive4_sobrenome.txt", "w") as detetive:
+        with open("arquivos txt/detetive4_sobrenome.txt", "w") as detetive:
             detetive.write(detetive4.getSobrenome() + ' ')
 
     def escreverCargoDetetive4(self):
-        with open("detetive4_cargo.txt", "w") as detetive:
+        with open("arquivos txt/detetive4_cargo.txt", "w") as detetive:
             detetive.write(detetive4.getCargo() + ' ')
 
     def escreverParticipacaoAnteriorDetetive4(self):
-        with open("detetive4_participacao_anterior.txt", "w") as detetive:
+        with open("arquivos txt/detetive4_participacao_anterior.txt", "w") as detetive:
             detetive.write(detetive4.getParticipacaoAnterior() + ' ')
 
     def escreverNomeDetetive5(self):
-        with open("detetive5_nome.txt", "w") as detetive:
+        with open("arquivos txt/detetive5_nome.txt", "w") as detetive:
             detetive.write(detetive5.getNome() + ' ')
 
     def escreverSobrenomeDetetive5(self):
-        with open("detetive5_sobrenome.txt", "w") as detetive:
+        with open("arquivos txt/detetive5_sobrenome.txt", "w") as detetive:
             detetive.write(detetive5.getSobrenome() + ' ')
 
     def escreverCargoDetetive5(self):
-        with open("detetive5_cargo.txt", "w") as detetive:
+        with open("arquivos txt/detetive5_cargo.txt", "w") as detetive:
             detetive.write(detetive5.getCargo() + ' ')
 
     def escreverParticipacaoAnteriorDetetive5(self):
-        with open("detetive5_participacao_anterior.txt", "w") as detetive:
+        with open("arquivos txt/detetive5_participacao_anterior.txt", "w") as detetive:
             detetive.write(detetive5.getParticipacaoAnterior() + ' ')
 
     def escreverNomeDetetive6(self):
-        with open("detetive6_nome.txt", "w") as detetive:
+        with open("arquivos txt/detetive6_nome.txt", "w") as detetive:
             detetive.write(detetive6.getNome() + ' ')
 
     def escreverSobrenomeDetetive6(self):
-        with open("detetive6_sobrenome.txt", "w") as detetive:
+        with open("arquivos txt/detetive6_sobrenome.txt", "w") as detetive:
             detetive.write(detetive6.getSobrenome() + ' ')
 
     def escreverCargoDetetive6(self):
-        with open("detetive6_cargo.txt", "w") as detetive:
+        with open("arquivos txt/detetive6_cargo.txt", "w") as detetive:
             detetive.write(detetive6.getCargo() + ' ')
 
     def escreverParticipacaoAnteriorDetetive6(self):
-        with open("detetive6_participacao_anterior.txt", "w") as detetive:
+        with open("arquivos txt/detetive6_participacao_anterior.txt", "w") as detetive:
             detetive.write(detetive6.getParticipacaoAnterior() + ' ')
-    def escreverAlianca(self, textoAlianca):
-        with open(self.alianca, "w") as alianca:
-            alianca.write(alianca1.getDetetivesAliados()[0].getNome(), alianca1.getDetetivesAliados()[1].getNome())
+    def escreverAlianca1(self):
+        with open("arquivos txt/alianca1.txt", "w") as alianca:
+            alianca.write(alianca1.getDetetivesAliados()[0].getNome() + ' e ' + alianca1.getDetetivesAliados()[1].getNome())
 
-            alianca.write(alianca2.getDetetivesAliados()[0].getNome(), alianca2.getDetetivesAliados()[1].getNome())
+    def escreverAlianca2(self):
+        with open("arquivos txt/alianca2.txt", "w") as alianca:
+            alianca.write(alianca2.getDetetivesAliados()[0].getNome() + ' e ' + alianca2.getDetetivesAliados()[1].getNome())
 
-            alianca.write(alianca3.getDetetivesAliados()[0].getNome(), alianca3.getDetetivesAliados()[1].getNome())
+    def escreverAlianca3(self):
+        with open("arquivos txt/alianca3.txt", "w") as alianca:
+            alianca.write(alianca3.getDetetivesAliados()[0].getNome() + ' e ' + alianca3.getDetetivesAliados()[1].getNome())
 
     def escreverPeca(self, textoPeca):
         with open(self.peca, "w") as peca:
@@ -298,37 +342,47 @@ class Arquivo:
         textoDetetive15 = self.lerDetetive15()
         textoDetetive16 = self.lerDetetive16()
 
-        textoAlianca = self.lerAlianca()
+        textoDetetive17 = self.lerDetetive17()
+        textoDetetive18 = self.lerDetetive18()
+        textoDetetive19 = self.lerDetetive19()
+        textoDetetive20 = self.lerDetetive20()
+
+        textoDetetive21 = self.lerDetetive21()
+        textoDetetive22 = self.lerDetetive22()
+        textoDetetive23 = self.lerDetetive23()
+        textoDetetive24 = self.lerDetetive24()
+
+        textoAlianca1 = self.lerAlianca1()
+        textoAlianca2 = self.lerAlianca2()
+        textoAlianca3 = self.lerAlianca3()
+
+
         textoCompeticao = self.lerCompeticao()
         textoEstrategia = self.lerEstrategia()
         textoPeca = self.lerPeca()
         textoRanking = self.lerRanking()
         textoRegras = self.lerRegras()
         textoTrofeu = self.lerTrofeu()
-        comandos = conexao.cursor()  # Cria um objeto cursor para executar comandos SQL
-        comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive}', '{textoDetetive2}', '{textoDetetive3}', '{textoDetetive4}')")
-        comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive6}', '{textoDetetive8}', '{textoDetetive5}', '{textoDetetive7}')")
-        comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive9}', '{textoDetetive10}', '{textoDetetive11}', '{textoDetetive12}')")
-        comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive9}', '{textoDetetive10}', '{textoDetetive11}', '{textoDetetive12}')")
+        comandos = conexao.cursor()
+        # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive}', '{textoDetetive2}', '{textoDetetive3}', '{textoDetetive4}')")
+        # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive6}', '{textoDetetive8}', '{textoDetetive5}', '{textoDetetive7}')")
+        # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive9}', '{textoDetetive10}', '{textoDetetive11}', '{textoDetetive12}')")
+        # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive13}', '{textoDetetive14}', '{textoDetetive15}', '{textoDetetive16}')")
+        # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive17}', '{textoDetetive18}', '{textoDetetive19}', '{textoDetetive20}')")
+        # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive21}', '{textoDetetive22}', '{textoDetetive23}', '{textoDetetive24}')")
+        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca1}')")
+        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca2}')")
+        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca3}')")
 
-
-        # comandos.execute(f"INSERT INTO {table} (sobrenome) values ('{textoDetetive}')")
-        # comandos.execute(f"INSERT INTO {table} (cargo) values ('{textoDetetive}')")
-        # comandos.execute(f"INSERT INTO {table} (participacaoAnterior) values ('{textoDetetive}')")
-        # comandos.execute(f"INSERT INTO {table} (peca) values ('{textoPeca}')")
-        # comandos.execute(f"INSERT INTO {table} (ranking) values ('{textoRanking}')")
-        # comandos.execute(f"INSERT INTO {table} (regras) values ('{textoRegras}')")
-        # comandos.execute(f"INSERT INTO {table} (trofeu) values ('{textoTrofeu}')")
-        conexao.commit()  # Confirma a transação no banco de dados
-        conexao.close()  # Fecha a conexão com o banco de dados
-
+        conexao.commit()
+        conexao.close()
 
     def lerBanco(self, banco, ip, usuario, senha, table):
         conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco)
 
         comandos = conexao.cursor()
         query = "SELECT * from detetive"
-        # query = "SELECT * from alianca"
+        query = "SELECT * from alianca"
         # query = "SELECT * from competicao"
         # query = "SELECT * from estrategia"
         # query = "SELECT * from peca"
@@ -632,20 +686,24 @@ arq.escreverSobrenomeDetetive6()
 arq.escreverCargoDetetive6()
 arq.escreverParticipacaoAnteriorDetetive6()
 
+arq.escreverAlianca1()
+arq.escreverAlianca2()
+arq.escreverAlianca3()
 
-# arq.escreverAlianca("alianca.txt")
 # arq.escreverPeca("peca.txt")
 # arq.escreverEstrategia("estrategia.txt")
 # arq.escreverRegra("regras.txt")
 # arq.escreverCompeticao("competicao.txt")
 # arq.escreverRanking("ranking.txt")
 # arq.escreverTrofeu("trofeu.txt")
-arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
-# # arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
+#arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
+arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "peca")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "ranking")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "regras")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "trofeu")
-arq.lerBanco("Classes", "localhost", "root", "", "detetive")
+#arq.lerBanco("Classes", "localhost", "root", "", "detetive")
+arq.lerBanco("Classes", "localhost", "root", "", "alianca")
+
