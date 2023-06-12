@@ -401,6 +401,24 @@ class Arquivo:
         textoAlianca2 = self.lerAlianca2()
         textoAlianca3 = self.lerAlianca3()
 
+        textoPeca1 = self.lerPeca1()
+        textoPeca2 = self.lerPeca2()
+        textoPeca3 = self.lerPeca3()
+        textoPeca4 = self.lerPeca4()
+        textoPeca5 = self.lerPeca5()
+        textoPeca6 = self.lerPeca6()
+        textoPeca7 = self.lerPeca7()
+        textoPeca8 = self.lerPeca8()
+
+        textoEstrategia1 = self.lerEstrategia1()
+        textoEstrategia2 = self.lerEstrategia2()
+        textoEstrategia3 = self.lerEstrategia3()
+        textoEstrategia4 = self.lerEstrategia4()
+        textoEstrategia5 = self.lerEstrategia5()
+        textoEstrategia6 = self.lerEstrategia6()
+        textoEstrategia7 = self.lerEstrategia7()
+        textoEstrategia8 = self.lerEstrategia8()
+
         textoCompeticao = self.lerCompeticao()
         textoEstrategia = self.lerEstrategia()
         textoPeca = self.lerPeca()
@@ -434,6 +452,20 @@ class Arquivo:
         comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu4}', '{textoTrofeu5}', '{textoTrofeu6}')")
         comandos.execute(f"INSERT INTO {table} (detetive_id, anoVitoria, fraseVitoria) VALUES ('{textoTrofeu7}', '{textoTrofeu8}', '{textoTrofeu9}')")
 
+
+        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca1}')")
+        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca2}')")
+        comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca3}')")
+
+        # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca1}', '{textoPeca2}')")
+        # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca3}', '{textoPeca4}')")
+        # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca5}', '{textoPeca6}')")
+        # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca7}', '{textoPeca8}')")
+
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia1}', {textoEstrategia2}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia3}', {textoEstrategia4}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia5}', {textoEstrategia6}')")
+        # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia7}', {textoEstrategia8}')")
 
         conexao.commit()
         conexao.close()
