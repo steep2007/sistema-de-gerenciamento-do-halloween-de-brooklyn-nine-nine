@@ -157,8 +157,25 @@ class Arquivo:
         with open('arquivos txt/peca4_descricao.txt', "r") as peca:
             return peca.read()
 
-    def lerRegras(self):
-        with open('regras.txt', "r") as regras:
+    def lerRegras1(self):
+        with open('arquivos txt/regras1_restricoes.txt', "r") as regras:
+            return regras.read()
+    def lerRegras2(self):
+        with open('arquivos txt/regras1_duracao.txt', "r") as regras:
+            return regras.read()
+
+    def lerRegras3(self):
+        with open('arquivos txt/regras2_restricoes.txt', "r") as regras:
+            return regras.read()
+    def lerRegras4(self):
+        with open('arquivos txt/regras2_duracao.txt', "r") as regras:
+            return regras.read()
+
+    def lerRegras5(self):
+        with open('arquivos txt/regras3_restricoes.txt', "r") as regras:
+            return regras.read()
+    def lerRegras6(self):
+        with open('arquivos txt/regras3_duracao.txt', "r") as regras:
             return regras.read()
 
     def lerRanking1(self):
@@ -377,15 +394,28 @@ class Arquivo:
             competicao.write(competicao3.getListaParticipantes()[0].getNome() + ',' + competicao3.getListaParticipantes()[1].getNome() + ',' + competicao3.getListaParticipantes()[2].getNome() + ',' + competicao3.getListaParticipantes()[3].getNome() + ',' + competicao3.getListaParticipantes()[4].getNome() + ',' + competicao3.getListaParticipantes()[5].getNome())
             competicao.write(competicao3.getDataCompeticao())
 
-    def escreverRegra(self):
-        with open(self.regras, "w") as regras:
+    def escreverRegrasRestricoes1(self):
+        with open('arquivos txt/regras1_restricoes.txt', "w") as regras:
             regras.write(regras1.getRestricoesLocal())
+
+    def escreverRegrasDuracao1(self):
+        with open('arquivos txt/regras1_duracao.txt', "w") as regras:
             regras.write(regras1.getDuracao())
 
+    def escreverRegrasRestricoes2(self):
+        with open('arquivos txt/regras2_restricoes.txt', "w") as regras:
             regras.write(regras2.getRestricoesLocal())
+
+    def escreverRegrasDuracao2(self):
+        with open('arquivos txt/regras2_duracao.txt', "w") as regras:
             regras.write(regras2.getDuracao())
 
+    def escreverRegrasRestricoes3(self):
+        with open('arquivos txt/regras3_restricoes.txt', "w") as regras:
             regras.write(regras3.getRestricoesLocal())
+
+    def escreverRegrasDuracao3(self):
+        with open('arquivos txt/regras3_duracao.txt', "w") as regras:
             regras.write(regras3.getDuracao())
 
     def escreverDetetiveRanking1(self):
@@ -499,8 +529,13 @@ class Arquivo:
         # textoEstrategia8 = self.lerEstrategia8()
 
         textoCompeticao = self.lerCompeticao()
-        textoEstrategia = self.lerEstrategia()
-        textoRegras = self.lerRegras()
+
+        textoRegras1 = self.lerRegras1()
+        textoRegras2 = self.lerRegras2()
+        textoRegras3 = self.lerRegras3()
+        textoRegras4 = self.lerRegras4()
+        textoRegras5 = self.lerRegras5()
+        textoRegras6 = self.lerRegras6()
 
         textoRanking1 = self.lerRanking1()
         textoRanking2 = self.lerRanking2()
@@ -543,6 +578,10 @@ class Arquivo:
         # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia5}', '{textoEstrategia6}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id, lista_acoes) VALUES ('{textoEstrategia7}', '{textoEstrategia8}')")
 
+
+        # comandos.execute(f"INSERT INTO {table} (restricoesLocal, duracao) VALUES ('{textoRegras1}', '{textoRegras2}')")
+        # comandos.execute(f"INSERT INTO {table} (restricoesLocal, duracao) VALUES ('{textoRegras3}', '{textoRegras4}')")
+        # comandos.execute(f"INSERT INTO {table} (restricoesLocal, duracao) VALUES ('{textoRegras5}', '{textoRegras6}')")
         # comandos.execute(f"INSERT INTO {table} (listaDetetives, pontuacoes) VALUES ('{textoRanking1}', '{textoRanking2}')")
         # comandos.execute(f"INSERT INTO {table} (listaDetetives, pontuacoes) VALUES ('{textoRanking3}', '{textoRanking4}')")
         # comandos.execute(f"INSERT INTO {table} (listaDetetives, pontuacoes) VALUES ('{textoRanking5}', '{textoRanking6}')")
@@ -564,7 +603,7 @@ class Arquivo:
         #query = "SELECT * from peca"
         query = "SELECT * from estrategia"
         # query = "SELECT * from competicao"
-        # query = "SELECT * from regras"
+        #query = "SELECT * from regras"
         comandos.execute(query)
 
         for linha in comandos:
@@ -879,8 +918,16 @@ arq.escreverPecaDetetive4()
 arq.escreverPecaDescricao4()
 
 # arq.escreverEstrategia("estrategia.txt")
-# arq.escreverRegra("regras.txt")
 # arq.escreverCompeticao("competicao.txt")
+
+arq.escreverRegrasRestricoes1()
+arq.escreverRegrasDuracao1()
+
+arq.escreverRegrasRestricoes2()
+arq.escreverRegrasDuracao2()
+
+arq.escreverRegrasRestricoes3()
+arq.escreverRegrasDuracao3()
 
 arq.escreverDetetiveRanking1()
 arq.escreverPontosRanking1()
@@ -905,16 +952,18 @@ arq.escreverFraseVitoriaTrofeu3()
 
 #arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
 #arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
-arq.escreverBanco("Classes", "localhost", "root", "", "peca")
+#arq.escreverBanco("Classes", "localhost", "root", "", "peca")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
-# # arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
-# # arq.escreverBanco("Classes", "localhost", "root", "", "regras")
+arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
+#arq.escreverBanco("Classes", "localhost", "root", "", "regras")
 #arq.escreverBanco("Classes", "localhost", "root", "", "ranking")
 #arq.escreverBanco("Classes", "localhost", "root", "", "trofeu")
 
 #arq.lerBanco("Classes", "localhost", "root", "", "detetive")
 #arq.lerBanco("Classes", "localhost", "root", "", "alianca")
-arq.lerBanco("Classes", "localhost", "root", "", "peca")
+#arq.lerBanco("Classes", "localhost", "root", "", "peca")
+arq.lerBanco("Classes", "localhost", "root", "", "estrategia")
+#arq.lerBanco("Classes", "localhost", "root", "", "regras")
 #arq.lerBanco("Classes", "localhost", "root", "", "ranking")
 #arq.lerBanco("Classes", "localhost", "root", "", "trofeu")
 
