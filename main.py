@@ -125,8 +125,36 @@ class Arquivo:
         with open('estrategia.txt', "r") as estrategia:
             return estrategia.read()
 
-    def lerPeca(self):
-        with open('peca.txt', "r") as peca:
+    def lerPeca1(self):
+        with open('arquivos txt/peca1_detetive.txt', "r") as peca:
+            return peca.read()
+
+    def lerPeca2(self):
+        with open('arquivos txt/peca1_descricao.txt', "r") as peca:
+            return peca.read()
+
+    def lerPeca3(self):
+        with open('arquivos txt/peca2_detetive.txt', "r") as peca:
+            return peca.read()
+
+    def lerPeca4(self):
+        with open('arquivos txt/peca2_descricao.txt', "r") as peca:
+            return peca.read()
+
+    def lerPeca5(self):
+        with open('arquivos txt/peca3_detetive.txt', "r") as peca:
+            return peca.read()
+
+    def lerPeca6(self):
+        with open('arquivos txt/peca3_descricao.txt', "r") as peca:
+            return peca.read()
+
+    def lerPeca7(self):
+        with open('arquivos txt/peca4_detetive.txt', "r") as peca:
+            return peca.read()
+
+    def lerPeca8(self):
+        with open('arquivos txt/peca4_descricao.txt', "r") as peca:
             return peca.read()
 
     def lerRegras(self):
@@ -293,21 +321,38 @@ class Arquivo:
         with open("arquivos txt/alianca3.txt", "w") as alianca:
             alianca.write(alianca3.getDetetivesAliados()[0].getNome() + ' e ' + alianca3.getDetetivesAliados()[1].getNome())
 
-    def escreverPeca(self, textoPeca):
-        with open(self.peca, "w") as peca:
+    def escreverPecaDetetive1(self):
+        with open('arquivos txt/peca1_detetive.txt', "w") as peca:
             peca.write(peca1.getDetetiveResponsavel().getNome())
+
+    def escreverPecaDescricao1(self):
+        with open('arquivos txt/peca1_descricao.txt', "w") as peca:
             peca.write(peca1.getDescricaoPeca())
 
+    def escreverPecaDetetive2(self):
+        with open('arquivos txt/peca2_detetive.txt', "w") as peca:
             peca.write(peca2.getDetetiveResponsavel().getNome())
-            peca.write(peca2.getDescricaoPeca())
 
+    def escreverPecaDescricao2(self):
+        with open('arquivos txt/peca2_descricao.txt', "w") as peca:
+            peca.write(peca2.getDescricaoPeca())
+    def escreverPecaDetetive3(self):
+        with open('arquivos txt/peca3_detetive.txt', "w") as peca:
             peca.write(peca3.getDetetiveResponsavel().getNome())
+
+    def escreverPecaDescricao3(self):
+        with open('arquivos txt/peca3_descricao.txt', "w") as peca:
             peca.write(peca3.getDescricaoPeca())
 
+    def escreverPecaDetetive4(self):
+        with open('arquivos txt/peca4_detetive.txt', "w") as peca:
             peca.write(peca4.getDetetiveResponsavel().getNome())
+
+    def escreverPecaDescricao4(self):
+        with open('arquivos txt/peca4_descricao.txt', "w") as peca:
             peca.write(peca4.getDescricaoPeca())
 
-    def escreverEstrategia(self, textoEstrategia):
+    def escreverEstrategia(self):
         with open(self.estrategia, "w") as estrategia:
             estrategia.write(estrategia1.getDetetive().getNome())
             estrategia.write(estrategia1.getListaAcoes())
@@ -321,18 +366,7 @@ class Arquivo:
             estrategia.write(estrategia4.getDetetive().getNome())
             estrategia.write(estrategia4.getListaAcoes())
 
-    def escreverRegra(self, textoRegras):
-        with open(self.regras, "w") as regras:
-            regras.write(regras1.getRestricoesLocal())
-            regras.write(regras1.getDuracao())
-
-            regras.write(regras2.getRestricoesLocal())
-            regras.write(regras2.getDuracao())
-
-            regras.write(regras3.getRestricoesLocal())
-            regras.write(regras3.getDuracao())
-
-    def escreverCompeticao(self, textoCompeticao):
+    def escreverCompeticao(self):
         with open(self.competicao, "w") as competicao:
             competicao.write(competicao1.getListaParticipantes()[0].getNome() + ',' + competicao1.getListaParticipantes()[1].getNome() + ',' + competicao1.getListaParticipantes()[2].getNome() + ',' + competicao1.getListaParticipantes()[3].getNome())
             competicao.write(competicao1.getDataCompeticao())
@@ -342,6 +376,17 @@ class Arquivo:
 
             competicao.write(competicao3.getListaParticipantes()[0].getNome() + ',' + competicao3.getListaParticipantes()[1].getNome() + ',' + competicao3.getListaParticipantes()[2].getNome() + ',' + competicao3.getListaParticipantes()[3].getNome() + ',' + competicao3.getListaParticipantes()[4].getNome() + ',' + competicao3.getListaParticipantes()[5].getNome())
             competicao.write(competicao3.getDataCompeticao())
+
+    def escreverRegra(self):
+        with open(self.regras, "w") as regras:
+            regras.write(regras1.getRestricoesLocal())
+            regras.write(regras1.getDuracao())
+
+            regras.write(regras2.getRestricoesLocal())
+            regras.write(regras2.getDuracao())
+
+            regras.write(regras3.getRestricoesLocal())
+            regras.write(regras3.getDuracao())
 
     def escreverDetetiveRanking1(self):
         with open('arquivos txt/ranking1_detetives.txt', "w") as ranking:
@@ -435,14 +480,14 @@ class Arquivo:
         textoAlianca2 = self.lerAlianca2()
         textoAlianca3 = self.lerAlianca3()
 
-        # textoPeca1 = self.lerPeca1()
-        # textoPeca2 = self.lerPeca2()
-        # textoPeca3 = self.lerPeca3()
-        # textoPeca4 = self.lerPeca4()
-        # textoPeca5 = self.lerPeca5()
-        # textoPeca6 = self.lerPeca6()
-        # textoPeca7 = self.lerPeca7()
-        # textoPeca8 = self.lerPeca8()
+        textoPeca1 = self.lerPeca1()
+        textoPeca2 = self.lerPeca2()
+        textoPeca3 = self.lerPeca3()
+        textoPeca4 = self.lerPeca4()
+        textoPeca5 = self.lerPeca5()
+        textoPeca6 = self.lerPeca6()
+        textoPeca7 = self.lerPeca7()
+        textoPeca8 = self.lerPeca8()
 
         # textoEstrategia1 = self.lerEstrategia1()
         # textoEstrategia2 = self.lerEstrategia2()
@@ -455,7 +500,6 @@ class Arquivo:
 
         textoCompeticao = self.lerCompeticao()
         textoEstrategia = self.lerEstrategia()
-        textoPeca = self.lerPeca()
         textoRegras = self.lerRegras()
 
         textoRanking1 = self.lerRanking1()
@@ -490,7 +534,6 @@ class Arquivo:
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca1}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca2}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca3}')")
-
         # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca1}', '{textoPeca2}')")
         # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca3}', '{textoPeca4}')")
         # comandos.execute(f"INSERT INTO {table} (detetiveResponsavel, descricaoPeca) VALUES ('{textoPeca5}', '{textoPeca6}')")
@@ -514,15 +557,14 @@ class Arquivo:
         conexao = mysql.connector.connect(host=ip, user=usuario, port="3306", password=senha, database=banco)
 
         comandos = conexao.cursor()
-        query = "SELECT * from detetive"
-        query = "SELECT * from alianca"
-        query = "SELECT * from trofeu"
-
+        #query = "SELECT * from detetive"
+        #query = "SELECT * from alianca"
+        #query = "SELECT * from trofeu"
+        #query = "SELECT * from ranking"
+        #query = "SELECT * from peca"
+        query = "SELECT * from estrategia"
         # query = "SELECT * from competicao"
-        # query = "SELECT * from estrategia"
-        # query = "SELECT * from peca"
         # query = "SELECT * from regras"
-        query = "SELECT * from ranking"
         comandos.execute(query)
 
         for linha in comandos:
@@ -824,7 +866,18 @@ arq.escreverAlianca1()
 arq.escreverAlianca2()
 arq.escreverAlianca3()
 
-# arq.escreverPeca("peca.txt")
+arq.escreverPecaDetetive1()
+arq.escreverPecaDescricao1()
+
+arq.escreverPecaDetetive2()
+arq.escreverPecaDescricao2()
+
+arq.escreverPecaDetetive3()
+arq.escreverPecaDescricao3()
+
+arq.escreverPecaDetetive4()
+arq.escreverPecaDescricao4()
+
 # arq.escreverEstrategia("estrategia.txt")
 # arq.escreverRegra("regras.txt")
 # arq.escreverCompeticao("competicao.txt")
@@ -852,14 +905,16 @@ arq.escreverFraseVitoriaTrofeu3()
 
 #arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
 #arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
+arq.escreverBanco("Classes", "localhost", "root", "", "peca")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
-# # arq.escreverBanco("Classes", "localhost", "root", "", "peca")
 # # arq.escreverBanco("Classes", "localhost", "root", "", "regras")
 #arq.escreverBanco("Classes", "localhost", "root", "", "ranking")
 #arq.escreverBanco("Classes", "localhost", "root", "", "trofeu")
+
 #arq.lerBanco("Classes", "localhost", "root", "", "detetive")
 #arq.lerBanco("Classes", "localhost", "root", "", "alianca")
+arq.lerBanco("Classes", "localhost", "root", "", "peca")
 #arq.lerBanco("Classes", "localhost", "root", "", "ranking")
 #arq.lerBanco("Classes", "localhost", "root", "", "trofeu")
 
