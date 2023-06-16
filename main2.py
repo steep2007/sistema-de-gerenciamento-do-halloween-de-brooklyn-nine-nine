@@ -52,10 +52,51 @@ class Arquivo:
             trofeu.write(f'{trofeu2.getDetetiveVencedor().getNome()}, {trofeu2.getAnoVitoria().getDataCompeticao()}, {trofeu2.getFraseVitoria()}')
             trofeu.write(f'{trofeu3.getDetetiveVencedor().getNome()}, {trofeu3.getAnoVitoria().getDataCompeticao()}, {trofeu3.getFraseVitoria()}')
 
+    def escreverBanco(self, banco, ip, usuario, porta, senha, table):
+        conexao = mysql.connector.connect(host=ip, user=usuario, port=porta, password=senha, database=banco)
 
+        cursor = conexao.cursor()
 
+        cursor.execute(detetive1.sql())
+        cursor.execute(detetive2.sql())
+        cursor.execute(detetive3.sql())
+        cursor.execute(detetive4.sql())
+        cursor.execute(detetive5.sql())
+        cursor.execute(detetive6.sql())
 
+        cursor.execute(alianca1.sql())
+        cursor.execute(alianca2.sql())
+        cursor.execute(alianca3.sql())
 
+        cursor.execute(peca1.sql())
+        cursor.execute(peca2.sql())
+        cursor.execute(peca3.sql())
+        cursor.execute(peca4.sql())
+
+        cursor.execute(estrategia1.sql())
+        cursor.execute(estrategia2.sql())
+        cursor.execute(estrategia3.sql())
+        cursor.execute(estrategia4.sql())
+
+        cursor.execute(competicao1.sql())
+        cursor.execute(competicao2.sql())
+        cursor.execute(competicao3.sql())
+
+        cursor.execute(regras1.sql())
+        cursor.execute(regras2.sql())
+        cursor.execute(regras3.sql())
+        cursor.execute(regras4.sql())
+
+        cursor.execute(ranking1.sql())
+        cursor.execute(ranking2.sql())
+        cursor.execute(ranking3.sql())
+
+        cursor.execute(trofeu1.sql())
+        cursor.execute(trofeu2.sql())
+        cursor.execute(trofeu3.sql())
+
+        conexao.commit()
+        conexao.close()
 
 detetive1 = Detetive()
 detetive1.setNome("Jake")
