@@ -30,7 +30,11 @@ class Arquivo:
 
     def regras(self):
         with open('arquivostxt/regras.txt', 'w') as regras:
-            regras.write(regras1.getRestricoesLocal(), )
+            regras.write(f'{regras1.getRestricoesLocal()}, {regras1.getDuracao()}')
+            regras.write(f'{regras2.getRestricoesLocal()}, {regras2.getDuracao()}')
+            regras.write(f'{regras3.getRestricoesLocal()}, {regras3.getDuracao()}')
+            regras.write(f'{regras4.getRestricoesLocal()}, {regras4.getDuracao()}')
+
     def escreverEstrategia(self):
         with open('arquivostxt/peca.txt', 'w') as estrategia:
             estrategia.write(estrategia1.getDetetive().getNome())
