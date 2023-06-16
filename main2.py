@@ -15,9 +15,9 @@ class Arquivo:
             detetive.write(f'{detetive1.getNome()}, {detetive1.getSobrenome()}, {detetive1.getCargo()}, {detetive1.getParticipacaoAnterior()}, '+'')
             detetive.write(f'{detetive2.getNome()}, {detetive2.getSobrenome()}, {detetive2.getCargo()}, {detetive2.getParticipacaoAnterior()}, '+'')
             detetive.write(f'{detetive3.getNome()}, {detetive3.getSobrenome()}, {detetive3.getCargo()}, {detetive3.getParticipacaoAnterior()}, '+'')
-            detetive.write(f'{detetive1.getNome()}, {detetive4.getSobrenome()}, {detetive4.getCargo()}, {detetive4.getParticipacaoAnterior()}, '+'')
-            detetive.write(f'{detetive2.getNome()}, {detetive5.getSobrenome()}, {detetive5.getCargo()}, {detetive5.getParticipacaoAnterior()}, '+'')
-            detetive.write(f'{detetive3.getNome()}, {detetive6.getSobrenome()}, {detetive6.getCargo()}, {detetive6.getParticipacaoAnterior()}, '+'')
+            detetive.write(f'{detetive4.getNome()}, {detetive4.getSobrenome()}, {detetive4.getCargo()}, {detetive4.getParticipacaoAnterior()}, '+'')
+            detetive.write(f'{detetive5.getNome()}, {detetive5.getSobrenome()}, {detetive5.getCargo()}, {detetive5.getParticipacaoAnterior()}, '+'')
+            detetive.write(f'{detetive6.getNome()}, {detetive6.getSobrenome()}, {detetive6.getCargo()}, {detetive6.getParticipacaoAnterior()}, '+'')
 
     def alianca(self):
         with open('arquivostxt/alianca.txt', 'w') as alianca:
