@@ -21,12 +21,16 @@ class Arquivo:
 
     def alianca(self):
         with open('arquivostxt/alianca.txt', 'w') as alianca:
-            alianca.write(alianca1.getDetetivesAliados()[0].getNome() + ' e ' + alianca1.getDetetivesAliados()[1].getNome())
-            alianca.write(alianca2.getDetetivesAliados()[0].getNome() + ' e ' + alianca2.getDetetivesAliados()[1].getNome())
-            alianca.write(alianca3.getDetetivesAliados()[0].getNome() + ' e ' + alianca3.getDetetivesAliados()[1].getNome())
+            alianca.write(f'{alianca1.getDetetivesAliados()[0].getNome()}, {alianca1.getDetetivesAliados()[1].getNome()}' + '')
+            alianca.write(f'{alianca2.getDetetivesAliados()[0].getNome()}, {alianca2.getDetetivesAliados()[1].getNome()}' + '')
+            alianca.write(f'{alianca3.getDetetivesAliados()[0].getNome()}, {alianca3.getDetetivesAliados()[1].getNome()}' + '')
+
     def peca(self):
         with open('arquivostxt/peca.txt', 'w') as peca:
-            peca.write(peca1.getDetetiveResponsavel().getNome())
+            peca.write(f'{peca1.getDetetiveResponsavel().getNome()}, {peca1.getDescricaoPeca()}' + '')
+            peca.write(f'{peca2.getDetetiveResponsavel().getNome()}, {peca2.getDescricaoPeca()}' + '')
+            peca.write(f'{peca3.getDetetiveResponsavel().getNome()}, {peca3.getDescricaoPeca()}' + '')
+            peca.write(f'{peca4.getDetetiveResponsavel().getNome()}, {peca4.getDescricaoPeca()}' + '')
 
     def regras(self):
         with open('arquivostxt/regras.txt', 'w') as regras:
@@ -35,9 +39,19 @@ class Arquivo:
             regras.write(f'{regras3.getRestricoesLocal()}, {regras3.getDuracao()}')
             regras.write(f'{regras4.getRestricoesLocal()}, {regras4.getDuracao()}')
 
-    def escreverEstrategia(self):
-        with open('arquivostxt/peca.txt', 'w') as estrategia:
-            estrategia.write(estrategia1.getDetetive().getNome())
+    def estrategia(self):
+        with open('arquivostxt/estrategia.txt', 'w') as estrategia:
+            estrategia.write(f'{estrategia1.getDetetive().getNome()}, {estrategia1.getListaAcoes()}'+'')
+            estrategia.write(f'{estrategia2.getDetetive().getNome()}, {estrategia2.getListaAcoes()}'+'')
+            estrategia.write(f'{estrategia3.getDetetive().getNome()}, {estrategia3.getListaAcoes()}'+'')
+            estrategia.write(f'{estrategia4.getDetetive().getNome()}, {estrategia4.getListaAcoes()}'+'')
+
+    def ranking(self):
+        with open('arquivostxt/ranking.txt', 'w') as ranking:
+            ranking.write(f'{estrategia1.getDetetive().getNome()}, {estrategia1.getListaAcoes()}'+'')
+            ranking.write(f'{estrategia2.getDetetive().getNome()}, {estrategia2.getListaAcoes()}'+'')
+            ranking.write(f'{estrategia3.getDetetive().getNome()}, {estrategia3.getListaAcoes()}'+'')
+        
 
 
     
