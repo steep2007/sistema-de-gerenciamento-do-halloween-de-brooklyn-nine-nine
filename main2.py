@@ -24,21 +24,17 @@ class Arquivo:
             alianca.write(alianca1.getDetetivesAliados()[0].getNome() + ' e ' + alianca1.getDetetivesAliados()[1].getNome())
             alianca.write(alianca2.getDetetivesAliados()[0].getNome() + ' e ' + alianca2.getDetetivesAliados()[1].getNome())
             alianca.write(alianca3.getDetetivesAliados()[0].getNome() + ' e ' + alianca3.getDetetivesAliados()[1].getNome())
-
     def peca(self):
         with open('arquivostxt/peca.txt', 'w') as peca:
             peca.write(peca1.getDetetiveResponsavel().getNome())
-            peca.write(peca1.getDescricaoPeca())
-            peca.write(peca2.getDetetiveResponsavel().getNome())
-            peca.write(peca2.getDescricaoPeca())
-            peca.write(peca3.getDetetiveResponsavel().getNome())
-            peca.write(peca3.getDescricaoPeca())
-            peca.write(peca4.getDetetiveResponsavel().getNome())
-            peca.write(peca4.getDescricaoPeca())
 
     def regras(self):
         with open('arquivostxt/regras.txt', 'w') as regras:
             regras.write(regras1.getRestricoesLocal(), )
+    def escreverEstrategia(self):
+        with open('arquivostxt/peca.txt', 'w') as estrategia:
+            estrategia.write(estrategia1.getDetetive().getNome())
+
 
     
 
