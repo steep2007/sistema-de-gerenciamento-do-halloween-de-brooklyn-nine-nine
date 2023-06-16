@@ -11,7 +11,7 @@ import mysql.connector
 
 class Arquivo: 
     def detetive(self):
-        with open('arquivostxt/detetive.txt', 'w') as detetive:
+        with open('txt/detetive.txt', 'w') as detetive:
             detetive.write(f'{detetive1.getNome()}, {detetive1.getSobrenome()}, {detetive1.getCargo()}, {detetive1.getParticipacaoAnterior()}, '+'')
             detetive.write(f'{detetive2.getNome()}, {detetive2.getSobrenome()}, {detetive2.getCargo()}, {detetive2.getParticipacaoAnterior()}, '+'')
             detetive.write(f'{detetive3.getNome()}, {detetive3.getSobrenome()}, {detetive3.getCargo()}, {detetive3.getParticipacaoAnterior()}, '+'')
@@ -20,34 +20,34 @@ class Arquivo:
             detetive.write(f'{detetive6.getNome()}, {detetive6.getSobrenome()}, {detetive6.getCargo()}, {detetive6.getParticipacaoAnterior()}, '+'')
 
     def alianca(self):
-        with open('arquivostxt/alianca.txt', 'w') as alianca:
+        with open('txt/alianca.txt', 'w') as alianca:
             alianca.write(alianca1.getDetetivesAliados()[0].getNome() + ' e ' + alianca1.getDetetivesAliados()[1].getNome())
             alianca.write(alianca2.getDetetivesAliados()[0].getNome() + ' e ' + alianca2.getDetetivesAliados()[1].getNome())
             alianca.write(alianca3.getDetetivesAliados()[0].getNome() + ' e ' + alianca3.getDetetivesAliados()[1].getNome())
     def peca(self):
-        with open('arquivostxt/peca.txt', 'w') as peca:
+        with open('txt/peca.txt', 'w') as peca:
             peca.write(peca1.getDetetiveResponsavel().getNome())
 
     def regras(self):
-        with open('arquivostxt/regras.txt', 'w') as regras:
+        with open('txt/regras.txt', 'w') as regras:
             regras.write(f'{regras1.getRestricoesLocal()}, {regras1.getDuracao()}')
             regras.write(f'{regras2.getRestricoesLocal()}, {regras2.getDuracao()}')
             regras.write(f'{regras3.getRestricoesLocal()}, {regras3.getDuracao()}')
             regras.write(f'{regras4.getRestricoesLocal()}, {regras4.getDuracao()}')
 
     def estrategia(self):
-        with open('arquivostxt/peca.txt', 'w') as estrategia:
+        with open('txt/peca.txt', 'w') as estrategia:
             estrategia.write(estrategia1.getDetetive().getNome())
 
     def competicao(self):
-        with open('arquivostxt/competicao.txt', 'w') as competicao:
+        with open('txt/competicao.txt', 'w') as competicao:
             competicao.write(f'{competicao1.getListaParticipantes()[0].getNome() ,competicao1.getListaParticipantes()[1].getNome(), competicao1.getListaParticipantes()[2].getNome(), competicao1.getListaParticipantes()[3].getNome()}, {competicao1.getDataCompeticao()}')
             competicao.write(f'{competicao2.getListaParticipantes()[0].getNome(), competicao2.getListaParticipantes()[1].getNome(), competicao2.getListaParticipantes()[2].getNome(), competicao2.getListaParticipantes()[3].getNome(), competicao2.getListaParticipantes()[4].getNome(), competicao2.getListaParticipantes()[5].getNome()}, {competicao2.getDataCompeticao()}')
             competicao.write(f'{competicao3.getListaParticipantes()[0].getNome(), competicao3.getListaParticipantes()[1].getNome(), competicao3.getListaParticipantes()[2].getNome(), competicao3.getListaParticipantes()[3].getNome(), competicao3.getListaParticipantes()[4].getNome(), competicao3.getListaParticipantes()[5].getNome()}, {competicao3.getDataCompeticao()}')
     
 
     def trofeu(self):
-        with open('arquivostxt/trofeu.txt', 'w') as trofeu:
+        with open('txt/trofeu.txt', 'w') as trofeu:
             trofeu.write(f'{trofeu1.getDetetiveVencedor().getNome()}, {trofeu1.getAnoVitoria().getDataCompeticao()}, {trofeu1.getFraseVitoria()}')
             trofeu.write(f'{trofeu2.getDetetiveVencedor().getNome()}, {trofeu2.getAnoVitoria().getDataCompeticao()}, {trofeu2.getFraseVitoria()}')
             trofeu.write(f'{trofeu3.getDetetiveVencedor().getNome()}, {trofeu3.getAnoVitoria().getDataCompeticao()}, {trofeu3.getFraseVitoria()}')
@@ -315,3 +315,13 @@ print("Vencedor 3")
 print(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}")
 print(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}")
 print(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n")
+
+arquivo = Arquivo()
+arquivo.detetive()
+arquivo.alianca()
+arquivo.peca()
+arquivo.estrategia()
+arquivo.competicao()
+arquivo.regras()
+arquivo.ranking()
+arquivo.trofeu()
