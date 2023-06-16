@@ -48,9 +48,9 @@ class Arquivo:
 
     def ranking(self):
         with open('arquivostxt/ranking.txt', 'w') as ranking:
-            ranking.write(f'{estrategia1.getDetetive().getNome()}, {estrategia1.getListaAcoes()}'+'')
-            ranking.write(f'{estrategia2.getDetetive().getNome()}, {estrategia2.getListaAcoes()}'+'')
-            ranking.write(f'{estrategia3.getDetetive().getNome()}, {estrategia3.getListaAcoes()}'+'')
+            ranking.write(f'{ranking1.getDetetive().getNome()}, {ranking1.getListaAcoes()}'+'')
+            ranking.write(f'{ranking2.getDetetive().getNome()}, {ranking2.getListaAcoes()}'+'')
+            ranking.write(f'{ranking3.getDetetive().getNome()}, {ranking3.getListaAcoes()}'+'')
         
 
     def competicao(self):
