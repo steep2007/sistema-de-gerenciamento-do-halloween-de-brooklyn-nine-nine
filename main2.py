@@ -10,21 +10,21 @@ from classes.trofeu import Trofeu
 import mysql.connector
 
 class Arquivo: 
-    def detetive(self):
-        with open('arquivostxt/detetive.txt', 'w') as file:
+    def escreverDetetive(self):
+        with open('arquivostxt/detetive.txt', 'w') as detetive:
             detetive.write({detetive1.getNome()}, {detetive1.getSobrenome()}, {detetive1.getCargo()}, {detetive1.getParticipacaoAnterior()}, '+')
             detetive.write({detetive2.getNome()}, {detetive2.getSobrenome()}, {detetive2.getCargo()}, {detetive2.getParticipacaoAnterior()}, '+')
             detetive.write({detetive3.getNome()}, {detetive3.getSobrenome()}, {detetive3.getCargo()}, {detetive3.getParticipacaoAnterior()}, '+')
 
-    def alianca(self):
-        with open('arquivostxt/alianca.txt', 'w') as file:
+    def escreverAlianca(self):
+        with open('arquivostxt/alianca.txt', 'w') as alianca:
             alianca.write(alianca1.getDetetivesAliados()[0].getNome() + ' e ' + alianca1.getDetetivesAliados()[1].getNome())
             alianca.write(alianca2.getDetetivesAliados()[0].getNome() + ' e ' + alianca2.getDetetivesAliados()[1].getNome())
             alianca.write(alianca3.getDetetivesAliados()[0].getNome() + ' e ' + alianca3.getDetetivesAliados()[1].getNome())
 
-    def peca(self):
-        with open('arquivostxt/peca.txt', 'w') as file:
-            peca.write(peca1.getDetetiveResponsavel().getNome())
+    def escreverPeca(self):
+        with open('arquivostxt/peca.txt', 'w') as peca:
+            peca.write({peca1.getDetetiveResponsavel().getNome()})
             peca.write(peca1.getDescricaoPeca())
             peca.write(peca2.getDetetiveResponsavel().getNome())
             peca.write(peca2.getDescricaoPeca())
@@ -32,6 +32,11 @@ class Arquivo:
             peca.write(peca3.getDescricaoPeca())
             peca.write(peca4.getDetetiveResponsavel().getNome())
             peca.write(peca4.getDescricaoPeca())
+
+    def escreverEstrategia(self):
+        with open('arquivostxt/peca.txt', 'w') as estrategia:
+            estrategia.write(estrategia1.getDetetive().getNome())
+
 
     
 
