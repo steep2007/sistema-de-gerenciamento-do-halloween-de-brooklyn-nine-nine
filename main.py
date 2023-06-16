@@ -371,6 +371,22 @@ class Arquivo:
     def escreverParticipacaoAnteriorDetetive6(self):
         with open("arquivos txt/detetive6_participacao_anterior.txt", "w") as detetive:
             detetive.write(detetive6.getParticipacaoAnterior() + ' ')
+
+    def escreverNomeDetetive7(self):
+        with open("arquivos txt/detetive7_nome.txt", "w") as detetive:
+            detetive.write(detetive7.getNome() + ' ')
+
+    def escreverSobrenomeDetetive7(self):
+        with open("arquivos txt/detetive7_sobrenome.txt", "w") as detetive:
+            detetive.write(detetive7.getSobrenome() + ' ')
+
+    def escreverCargoDetetive7(self):
+        with open("arquivos txt/detetive7_cargo.txt", "w") as detetive:
+            detetive.write(detetive7.getCargo() + ' ')
+
+    def escreverParticipacaoAnteriorDetetive7(self):
+        with open("arquivos txt/detetive7_participacao_anterior.txt", "w") as detetive:
+            detetive.write(detetive7.getParticipacaoAnterior() + ' ')
     def escreverAlianca1(self):
         with open("arquivos txt/alianca1.txt", "w") as alianca:
             alianca.write(alianca1.getDetetivesAliados()[0].getNome() + ' e ' + alianca1.getDetetivesAliados()[1].getNome())
@@ -603,8 +619,10 @@ class Arquivo:
 
         textoCompeticao1 = self.lerCompeticao1()
         textoCompeticao2 = self.lerCompeticao2()
+
         textoCompeticao3 = self.lerCompeticao3()
         textoCompeticao4 = self.lerCompeticao4()
+
         textoCompeticao5 = self.lerCompeticao5()
         textoCompeticao6 = self.lerCompeticao6()
 
@@ -643,7 +661,7 @@ class Arquivo:
         # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive9}', '{textoDetetive10}', '{textoDetetive11}', '{textoDetetive12}')")
         # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive13}', '{textoDetetive14}', '{textoDetetive15}', '{textoDetetive16}')")
         # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive17}', '{textoDetetive18}', '{textoDetetive19}', '{textoDetetive20}')")
-        # comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive21}', '{textoDetetive22}', '{textoDetetive23}', '{textoDetetive24}')")
+        comandos.execute(f"INSERT INTO {table} (nome, sobrenome, cargo, participacaoAnterior) VALUES ('{textoDetetive21}', '{textoDetetive22}', '{textoDetetive23}', '{textoDetetive24}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca1}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca2}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id) VALUES ('{textoAlianca3}')")
@@ -656,9 +674,9 @@ class Arquivo:
         # comandos.execute(f"INSERT INTO {table} (detetive_id, listaAcoes) VALUES ('{textoEstrategia5}', '{textoEstrategia6}')")
         # comandos.execute(f"INSERT INTO {table} (detetive_id, listaAcoes) VALUES ('{textoEstrategia7}', '{textoEstrategia8}')")
 
-        comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao1}', '{textoCompeticao2}')")
-        comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao3}', '{textoCompeticao4}')")
-        comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao5}', '{textoCompeticao6}')")
+        # comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao1}', '{textoCompeticao2}')")
+        # comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao3}', '{textoCompeticao4}')")
+        # comandos.execute(f"INSERT INTO {table} (listaParticipantes, dataCompeticao) VALUES ('{textoCompeticao5}', '{textoCompeticao6}')")
 
         # comandos.execute(f"INSERT INTO {table} (restricoesLocal, duracao) VALUES ('{textoRegras1}', '{textoRegras2}')")
         # comandos.execute(f"INSERT INTO {table} (restricoesLocal, duracao) VALUES ('{textoRegras3}', '{textoRegras4}')")
@@ -747,8 +765,8 @@ print("Cargo: {}".format(detetive5.getCargo()))
 print("Participação Anterior: {}\n".format(detetive5.getParticipacaoAnterior()))
 
 detetive6 = Detetive()
-detetive6.setNome("Raymond")
-detetive6.setSobrenome("Holt")
+detetive6.setNome("André")
+detetive6.setSobrenome("Bezerra")
 detetive6.setCargo("Capitão de Polícia")
 detetive6.setParticipacaoAnterior("Vencedor")
 print("Detetive 6")
@@ -1049,10 +1067,10 @@ arq.escreverDetetiveVencedorTrofeu3()
 arq.escreverAnoVitoriaTrofeu3()
 arq.escreverFraseVitoriaTrofeu3()
 
-#arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
+arq.escreverBanco("Classes", "localhost", "root", "", "detetive")
 #arq.escreverBanco("Classes", "localhost", "root", "", "alianca")
 #arq.escreverBanco("Classes", "localhost", "root", "", "peca")
-arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
+#arq.escreverBanco("Classes", "localhost", "root", "", "competicao")
 #arq.escreverBanco("Classes", "localhost", "root", "", "estrategia")
 #arq.escreverBanco("Classes", "localhost", "root", "", "regras")
 #arq.escreverBanco("Classes", "localhost", "root", "", "ranking")

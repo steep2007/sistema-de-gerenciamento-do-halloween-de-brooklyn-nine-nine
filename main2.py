@@ -11,19 +11,22 @@ import mysql.connector
 
 class Arquivo: 
     def detetive(self):
-        with open('arquivostxt/detetive.txt', 'w') as file:
-            detetive.write({detetive1.getNome()}, {detetive1.getSobrenome()}, {detetive1.getCargo()}, {detetive1.getParticipacaoAnterior()}, '+')
-            detetive.write({detetive2.getNome()}, {detetive2.getSobrenome()}, {detetive2.getCargo()}, {detetive2.getParticipacaoAnterior()}, '+')
-            detetive.write({detetive3.getNome()}, {detetive3.getSobrenome()}, {detetive3.getCargo()}, {detetive3.getParticipacaoAnterior()}, '+')
+        with open('arquivostxt/detetive.txt', 'w') as detetive:
+            detetive.write(f'{detetive1.getNome()}, {detetive1.getSobrenome()}, {detetive1.getCargo()}, {detetive1.getParticipacaoAnterior()}, '+'')
+            detetive.write(f'{detetive2.getNome()}, {detetive2.getSobrenome()}, {detetive2.getCargo()}, {detetive2.getParticipacaoAnterior()}, '+'')
+            detetive.write(f'{detetive3.getNome()}, {detetive3.getSobrenome()}, {detetive3.getCargo()}, {detetive3.getParticipacaoAnterior()}, '+'')
+            detetive.write(f'{detetive1.getNome()}, {detetive4.getSobrenome()}, {detetive4.getCargo()}, {detetive4.getParticipacaoAnterior()}, '+'')
+            detetive.write(f'{detetive2.getNome()}, {detetive5.getSobrenome()}, {detetive5.getCargo()}, {detetive5.getParticipacaoAnterior()}, '+'')
+            detetive.write(f'{detetive3.getNome()}, {detetive6.getSobrenome()}, {detetive6.getCargo()}, {detetive6.getParticipacaoAnterior()}, '+'')
 
     def alianca(self):
-        with open('arquivostxt/alianca.txt', 'w') as file:
+        with open('arquivostxt/alianca.txt', 'w') as alianca:
             alianca.write(alianca1.getDetetivesAliados()[0].getNome() + ' e ' + alianca1.getDetetivesAliados()[1].getNome())
             alianca.write(alianca2.getDetetivesAliados()[0].getNome() + ' e ' + alianca2.getDetetivesAliados()[1].getNome())
             alianca.write(alianca3.getDetetivesAliados()[0].getNome() + ' e ' + alianca3.getDetetivesAliados()[1].getNome())
 
     def peca(self):
-        with open('arquivostxt/peca.txt', 'w') as file:
+        with open('arquivostxt/peca.txt', 'w') as peca:
             peca.write(peca1.getDetetiveResponsavel().getNome())
             peca.write(peca1.getDescricaoPeca())
             peca.write(peca2.getDetetiveResponsavel().getNome())
@@ -32,6 +35,10 @@ class Arquivo:
             peca.write(peca3.getDescricaoPeca())
             peca.write(peca4.getDetetiveResponsavel().getNome())
             peca.write(peca4.getDescricaoPeca())
+
+    def regras(self):
+        with open('arquivostxt/regras.txt', 'w') as regras:
+            regras.write(regras1.getRestricoesLocal(), )
 
     
 
