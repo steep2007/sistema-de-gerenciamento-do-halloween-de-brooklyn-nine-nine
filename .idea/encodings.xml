@@ -5,10 +5,7 @@
     <file url="file://$PROJECT_DIR$/arquivos txt/detetive2_cargo.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arquivos txt/detetive4_cargo.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arquivos txt/estrategia1_lista_acoes.txt" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arquivos txt/estrategia1_lista_acoes.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arquivos txt/peca1_descricao.txt" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arquivos txt/peca1_descricao.txt" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/arquivos txt/regras1_duracao.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/arquivos txt/regras1_duracao.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/classes.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/competicao.txt" charset="windows-1252" />
@@ -19,5 +16,7 @@
     <file url="file://$PROJECT_DIR$/ranking.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/regras.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/trofeu.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/txt/detetive.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/txt/trofeu.txt" charset="windows-1252" />
   </component>
 </project>

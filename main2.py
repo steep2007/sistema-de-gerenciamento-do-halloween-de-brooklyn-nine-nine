@@ -11,7 +11,7 @@ import mysql.connector
 
 class Arquivo: 
     def detetive(self):
-        with open('arquivostxt/detetive.txt', 'w') as detetive:
+        with open('txt/detetive.txt', 'w') as detetive:
             detetive.write(f'{detetive1.getNome()}, {detetive1.getSobrenome()}, {detetive1.getCargo()}, {detetive1.getParticipacaoAnterior()}, '+'')
             detetive.write(f'{detetive2.getNome()}, {detetive2.getSobrenome()}, {detetive2.getCargo()}, {detetive2.getParticipacaoAnterior()}, '+'')
             detetive.write(f'{detetive3.getNome()}, {detetive3.getSobrenome()}, {detetive3.getCargo()}, {detetive3.getParticipacaoAnterior()}, '+'')
@@ -20,20 +20,20 @@ class Arquivo:
             detetive.write(f'{detetive6.getNome()}, {detetive6.getSobrenome()}, {detetive6.getCargo()}, {detetive6.getParticipacaoAnterior()}, '+'')
 
     def alianca(self):
-        with open('arquivostxt/alianca.txt', 'w') as alianca:
+        with open('txt/alianca.txt', 'w') as alianca:
             alianca.write(f'{alianca1.getDetetivesAliados()[0].getNome()}, {alianca1.getDetetivesAliados()[1].getNome()}' + '')
             alianca.write(f'{alianca2.getDetetivesAliados()[0].getNome()}, {alianca2.getDetetivesAliados()[1].getNome()}' + '')
             alianca.write(f'{alianca3.getDetetivesAliados()[0].getNome()}, {alianca3.getDetetivesAliados()[1].getNome()}' + '')
 
     def peca(self):
-        with open('arquivostxt/peca.txt', 'w') as peca:
+        with open('txt/peca.txt', 'w') as peca:
             peca.write(f'{peca1.getDetetiveResponsavel().getNome()}, {peca1.getDescricaoPeca()}' + '')
             peca.write(f'{peca2.getDetetiveResponsavel().getNome()}, {peca2.getDescricaoPeca()}' + '')
             peca.write(f'{peca3.getDetetiveResponsavel().getNome()}, {peca3.getDescricaoPeca()}' + '')
             peca.write(f'{peca4.getDetetiveResponsavel().getNome()}, {peca4.getDescricaoPeca()}' + '')
 
     def regras(self):
-        with open('arquivostxt/regras.txt', 'w') as regras:
+        with open('txt/regras.txt', 'w') as regras:
             regras.write(f'{regras1.getRestricoesLocal()}, {regras1.getDuracao()}')
             regras.write(f'{regras2.getRestricoesLocal()}, {regras2.getDuracao()}')
             regras.write(f'{regras3.getRestricoesLocal()}, {regras3.getDuracao()}')
@@ -53,14 +53,64 @@ class Arquivo:
             ranking.write(f'{estrategia3.getDetetive().getNome()}, {estrategia3.getListaAcoes()}'+'')
         
 
-
+    def competicao(self):
+        with open('txt/competicao.txt', 'w') as competicao:
+            competicao.write(f'{competicao1.getListaParticipantes()[0].getNome() ,competicao1.getListaParticipantes()[1].getNome(), competicao1.getListaParticipantes()[2].getNome(), competicao1.getListaParticipantes()[3].getNome()}, {competicao1.getDataCompeticao()}')
+            competicao.write(f'{competicao2.getListaParticipantes()[0].getNome(), competicao2.getListaParticipantes()[1].getNome(), competicao2.getListaParticipantes()[2].getNome(), competicao2.getListaParticipantes()[3].getNome(), competicao2.getListaParticipantes()[4].getNome(), competicao2.getListaParticipantes()[5].getNome()}, {competicao2.getDataCompeticao()}')
+            competicao.write(f'{competicao3.getListaParticipantes()[0].getNome(), competicao3.getListaParticipantes()[1].getNome(), competicao3.getListaParticipantes()[2].getNome(), competicao3.getListaParticipantes()[3].getNome(), competicao3.getListaParticipantes()[4].getNome(), competicao3.getListaParticipantes()[5].getNome()}, {competicao3.getDataCompeticao()}')
     
 
+    def trofeu(self):
+        with open('txt/trofeu.txt', 'w') as trofeu:
+            trofeu.write(f'{trofeu1.getDetetiveVencedor().getNome()}, {trofeu1.getAnoVitoria().getDataCompeticao()}, {trofeu1.getFraseVitoria()}')
+            trofeu.write(f'{trofeu2.getDetetiveVencedor().getNome()}, {trofeu2.getAnoVitoria().getDataCompeticao()}, {trofeu2.getFraseVitoria()}')
+            trofeu.write(f'{trofeu3.getDetetiveVencedor().getNome()}, {trofeu3.getAnoVitoria().getDataCompeticao()}, {trofeu3.getFraseVitoria()}')
 
+    def escreverBanco(self, banco, ip, usuario, porta, senha, table):
+        conexao = mysql.connector.connect(host=ip, user=usuario, port=porta, password=senha, database=banco)
 
+        cursor = conexao.cursor()
 
+        cursor.execute(detetive1.sql())
+        cursor.execute(detetive2.sql())
+        cursor.execute(detetive3.sql())
+        cursor.execute(detetive4.sql())
+        cursor.execute(detetive5.sql())
+        cursor.execute(detetive6.sql())
 
+        cursor.execute(alianca1.sql())
+        cursor.execute(alianca2.sql())
+        cursor.execute(alianca3.sql())
 
+        cursor.execute(peca1.sql())
+        cursor.execute(peca2.sql())
+        cursor.execute(peca3.sql())
+        cursor.execute(peca4.sql())
+
+        cursor.execute(estrategia1.sql())
+        cursor.execute(estrategia2.sql())
+        cursor.execute(estrategia3.sql())
+        cursor.execute(estrategia4.sql())
+
+        cursor.execute(competicao1.sql())
+        cursor.execute(competicao2.sql())
+        cursor.execute(competicao3.sql())
+
+        cursor.execute(regras1.sql())
+        cursor.execute(regras2.sql())
+        cursor.execute(regras3.sql())
+        cursor.execute(regras4.sql())
+
+        cursor.execute(ranking1.sql())
+        cursor.execute(ranking2.sql())
+        cursor.execute(ranking3.sql())
+
+        cursor.execute(trofeu1.sql())
+        cursor.execute(trofeu2.sql())
+        cursor.execute(trofeu3.sql())
+
+        conexao.commit()
+        conexao.close()
 
 detetive1 = Detetive()
 detetive1.setNome("Jake")
@@ -235,7 +285,7 @@ competicao1.setListaParticipantes(detetive1)
 competicao1.setListaParticipantes(detetive2)
 competicao1.setListaParticipantes(detetive3)
 competicao1.setListaParticipantes(detetive4)
-competicao1.setDataCompeticao(2016/10/31)
+competicao1.setDataCompeticao(2016-10-31)
 print("Competição 1")
 print(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}")
 print(f"Data da Competição: {competicao1.getDataCompeticao()}\n")
@@ -247,7 +297,7 @@ competicao2.setListaParticipantes(detetive3)
 competicao2.setListaParticipantes(detetive4)
 competicao2.setListaParticipantes(detetive5)
 competicao2.setListaParticipantes(detetive6)
-competicao2.setDataCompeticao(2017/10/31)
+competicao2.setDataCompeticao(2017-10-31)
 print("Competição 2")
 print(f"Participantes: {competicao2.getListaParticipantes()[0].getNome()}, {competicao2.getListaParticipantes()[1].getNome()}, {competicao2.getListaParticipantes()[2].getNome()}, {competicao2.getListaParticipantes()[3].getNome()}, {competicao2.getListaParticipantes()[4].getNome()}, {competicao2.getListaParticipantes()[5].getNome()}")
 print(f"Data da Competição: {competicao2.getDataCompeticao()}\n")
@@ -259,7 +309,7 @@ competicao3.setListaParticipantes(detetive3)
 competicao3.setListaParticipantes(detetive4)
 competicao3.setListaParticipantes(detetive5)
 competicao3.setListaParticipantes(detetive6)
-competicao3.setDataCompeticao(2018/10/31)
+competicao3.setDataCompeticao(2018-10-31)
 print("Competição 3")
 print(f"Participantes: {competicao3.getListaParticipantes()[0].getNome()}, {competicao3.getListaParticipantes()[1].getNome()}, {competicao3.getListaParticipantes()[2].getNome()}, {competicao3.getListaParticipantes()[3].getNome()}, {competicao3.getListaParticipantes()[4].getNome()}, {competicao3.getListaParticipantes()[5].getNome()}")
 print(f"Data da Competição: {competicao3.getDataCompeticao()}\n")
@@ -320,3 +370,13 @@ print("Vencedor 3")
 print(f"Detetive Vencedor: {trofeu3.getDetetiveVencedor().getNome()}")
 print(f"Ano da Vitória: {trofeu3.getAnoVitoria().getDataCompeticao()}")
 print(f"Frase da Vitória: {trofeu3.getFraseVitoria()}\n")
+
+arquivo = Arquivo()
+arquivo.detetive()
+arquivo.alianca()
+arquivo.peca()
+arquivo.estrategia()
+arquivo.competicao()
+arquivo.regras()
+arquivo.ranking()
+arquivo.trofeu()
