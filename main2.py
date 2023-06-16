@@ -35,11 +35,15 @@ class Arquivo:
             regras.write(f'{regras3.getRestricoesLocal()}, {regras3.getDuracao()}')
             regras.write(f'{regras4.getRestricoesLocal()}, {regras4.getDuracao()}')
 
-    def escreverEstrategia(self):
+    def estrategia(self):
         with open('arquivostxt/peca.txt', 'w') as estrategia:
             estrategia.write(estrategia1.getDetetive().getNome())
 
-
+    def competicao(self):
+        with open('arquivostxt/competicao.txt', 'w') as competicao:
+            competicao.write(f'{competicao1.getListaParticipantes()[0].getNome() ,competicao1.getListaParticipantes()[1].getNome(), competicao1.getListaParticipantes()[2].getNome(), competicao1.getListaParticipantes()[3].getNome()}, {competicao1.getDataCompeticao()}')
+            competicao.write(f'{competicao2.getListaParticipantes()[0].getNome(), competicao2.getListaParticipantes()[1].getNome(), competicao2.getListaParticipantes()[2].getNome(), competicao2.getListaParticipantes()[3].getNome(), competicao2.getListaParticipantes()[4].getNome(), competicao2.getListaParticipantes()[5].getNome()}, {competicao2.getDataCompeticao()}')
+            competicao.write(f'{competicao3.getListaParticipantes()[0].getNome(), competicao3.getListaParticipantes()[1].getNome(), competicao3.getListaParticipantes()[2].getNome(), competicao3.getListaParticipantes()[3].getNome(), competicao3.getListaParticipantes()[4].getNome(), competicao3.getListaParticipantes()[5].getNome()}, {competicao3.getDataCompeticao()}')
     
 
 
@@ -221,7 +225,7 @@ competicao1.setListaParticipantes(detetive1)
 competicao1.setListaParticipantes(detetive2)
 competicao1.setListaParticipantes(detetive3)
 competicao1.setListaParticipantes(detetive4)
-competicao1.setDataCompeticao(2016/10/31)
+competicao1.setDataCompeticao(2016-10-31)
 print("Competição 1")
 print(f"Participantes: {competicao1.getListaParticipantes()[0].getNome()}, {competicao1.getListaParticipantes()[1].getNome()}, {competicao1.getListaParticipantes()[2].getNome()}, {competicao1.getListaParticipantes()[3].getNome()}")
 print(f"Data da Competição: {competicao1.getDataCompeticao()}\n")
@@ -233,7 +237,7 @@ competicao2.setListaParticipantes(detetive3)
 competicao2.setListaParticipantes(detetive4)
 competicao2.setListaParticipantes(detetive5)
 competicao2.setListaParticipantes(detetive6)
-competicao2.setDataCompeticao(2017/10/31)
+competicao2.setDataCompeticao(2017-10-31)
 print("Competição 2")
 print(f"Participantes: {competicao2.getListaParticipantes()[0].getNome()}, {competicao2.getListaParticipantes()[1].getNome()}, {competicao2.getListaParticipantes()[2].getNome()}, {competicao2.getListaParticipantes()[3].getNome()}, {competicao2.getListaParticipantes()[4].getNome()}, {competicao2.getListaParticipantes()[5].getNome()}")
 print(f"Data da Competição: {competicao2.getDataCompeticao()}\n")
@@ -245,7 +249,7 @@ competicao3.setListaParticipantes(detetive3)
 competicao3.setListaParticipantes(detetive4)
 competicao3.setListaParticipantes(detetive5)
 competicao3.setListaParticipantes(detetive6)
-competicao3.setDataCompeticao(2018/10/31)
+competicao3.setDataCompeticao(2018-10-31)
 print("Competição 3")
 print(f"Participantes: {competicao3.getListaParticipantes()[0].getNome()}, {competicao3.getListaParticipantes()[1].getNome()}, {competicao3.getListaParticipantes()[2].getNome()}, {competicao3.getListaParticipantes()[3].getNome()}, {competicao3.getListaParticipantes()[4].getNome()}, {competicao3.getListaParticipantes()[5].getNome()}")
 print(f"Data da Competição: {competicao3.getDataCompeticao()}\n")
