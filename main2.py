@@ -46,6 +46,11 @@ class Arquivo:
             competicao.write(f'{competicao3.getListaParticipantes()[0].getNome(), competicao3.getListaParticipantes()[1].getNome(), competicao3.getListaParticipantes()[2].getNome(), competicao3.getListaParticipantes()[3].getNome(), competicao3.getListaParticipantes()[4].getNome(), competicao3.getListaParticipantes()[5].getNome()}, {competicao3.getDataCompeticao()}')
     
 
+    def trofeu(self):
+        with open('arquivostxt/trofeu.txt', 'w') as trofeu:
+            trofeu.write(f'{trofeu1.getDetetiveVencedor().getNome()}, {trofeu1.getAnoVitoria().getDataCompeticao()}, {trofeu1.getFraseVitoria()}')
+            trofeu.write(f'{trofeu2.getDetetiveVencedor().getNome()}, {trofeu2.getAnoVitoria().getDataCompeticao()}, {trofeu2.getFraseVitoria()}')
+            trofeu.write(f'{trofeu3.getDetetiveVencedor().getNome()}, {trofeu3.getAnoVitoria().getDataCompeticao()}, {trofeu3.getFraseVitoria()}')
 
 
 
